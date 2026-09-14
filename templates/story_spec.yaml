@@ -1,0 +1,92 @@
+story_spec:
+  # Story layer before directing. Fill only fields that materially matter.
+  premise: ""
+  designing_principle: null
+  genre_or_form: []
+
+  promises_to_audience: []
+  inherent_story_challenges: []
+
+  seven_steps:
+    weakness_need:
+      psychological: null
+      moral: null
+    desire: null
+    opponent: null
+    plan: null
+    battle_or_decisive_conflict: null
+    self_revelation:
+      psychological: null
+      moral: null
+    new_equilibrium: null
+
+  macro_story_movement:
+    inciting_incident: null
+    progressive_complications: []
+    crisis:
+      dilemma: null
+      maximum_pressure: null
+      choice: null
+    climax:
+      decisive_action: null
+      irreversible_value_change: null
+    resolution: null
+
+  forces_of_antagonism:
+    internal: []
+    personal: []
+    social_or_institutional: []
+    environmental: []
+
+  theme:
+    moral_argument: null
+    express_through_action: true
+
+  character_web_ref: "templates/character_bible.yaml"
+
+  story_world:
+    one_line: null
+    overall_arena: null
+    visual_oppositions: []
+    natural_settings: []
+    man_made_spaces: []
+    technology: []
+    time_structure: null
+    visual_states: []
+
+  symbol_web:
+    enabled: false
+    story_symbol: null
+    character_symbols: []
+    symbolic_objects: []
+    repetition_with_variation: []
+
+  revelations:
+    - id: R1
+      information: ""
+      learned_by: []
+      dramatic_strength: normal
+      changes_understanding_of: []
+
+  scene_weave:
+    - id: SC01
+      purpose: ""
+      story_value: null
+      opening_value_charge: null
+      driver: null
+      desire: null
+      endpoint: null
+      opponent: null
+      plan: null
+      expected_result: null
+      actual_result: null
+      gap: null
+      conflict_change: null
+      turning_point: null
+      closing_value_charge: null
+      next_decision: null
+      setup_refs: []
+      payoff_refs: []
+      reveal_ids: []
+      structure_step_tags: []
+      director_sequence_ref: null

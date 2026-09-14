@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "node_count": 7,
+  "link_count": 9,
+  "class_types": [
+    "CLIPTextEncode",
+    "CheckpointLoaderSimple",
+    "EmptyLatentImage",
+    "KSampler",
+    "SaveImage",
+    "VAEDecode"
+  ],
+  "structure_sha256": "248422831a8196c84348cc2f66957fffc3c235249af5aed152900b192401760e",
+  "links": [
+    {
+      "node_id": "3",
+      "input": "latent_image",
+      "upstream": "5",
+      "slot": 0
+    },
+    {
+      "node_id": "3",
+      "input": "model",
+      "upstream": "4",
+      "slot": 0
+    },
+    {
+      "node_id": "3",
+      "input": "negative",
+      "upstream": "7",
+      "slot": 0
+    },
+    {
+      "node_id": "3",
+      "input": "positive",
+      "upstream": "6",
+      "slot": 0
+    },
+    {
+      "node_id": "6",
+      "input": "clip",
+      "upstream": "4",
+      "slot": 1
+    },
+    {
+      "node_id": "7",
+      "input": "clip",
+      "upstream": "4",
+      "slot": 1
+    },
+    {
+      "node_id": "8",
+      "input": "samples",
+      "upstream": "3",
+      "slot": 0
+    },
+    {
+      "node_id": "8",
+      "input": "vae",
+      "upstream": "4",
+      "slot": 2
+    },
+    {
+      "node_id": "9",
+      "input": "images",
+      "upstream": "8",
+      "slot": 0
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}

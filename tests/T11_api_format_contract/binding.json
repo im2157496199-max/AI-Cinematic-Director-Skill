@@ -1,0 +1,8 @@
+{
+  "mutable_allowlist": ["positive_prompt", "seed", "steps"],
+  "bindings": {
+    "positive_prompt": {"node_id":"6", "expected_class_type":"CLIPTextEncode", "input":"text", "value_type":"string"},
+    "seed": {"node_id":"3", "expected_class_type":"KSampler", "input":"seed", "value_type":"int", "min":0},
+    "steps": {"node_id":"3", "expected_class_type":"KSampler", "input":"steps", "value_type":"int", "min":1, "max":100}
+  }
+}

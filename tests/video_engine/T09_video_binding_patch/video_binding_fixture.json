@@ -1,0 +1,58 @@
+{
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "38",
+        0
+      ],
+      "text": "old positive"
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "38",
+        0
+      ],
+      "text": "old negative"
+    }
+  },
+  "55": {
+    "class_type": "Wan22ImageToVideoLatent",
+    "inputs": {
+      "vae": [
+        "39",
+        0
+      ],
+      "width": 1280,
+      "height": 704,
+      "length": 49,
+      "batch_size": 1,
+      "start_image": [
+        "57",
+        0
+      ]
+    }
+  },
+  "57": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "old.png"
+    }
+  },
+  "47": {
+    "class_type": "SaveWEBM",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "ComfyUI",
+      "codec": "vp9",
+      "fps": 24.0,
+      "crf": 32.0
+    }
+  }
+}

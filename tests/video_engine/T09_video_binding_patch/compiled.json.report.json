@@ -1,0 +1,55 @@
+{
+  "structure_sha256_before": "c6fe804622a7b0769dd8be15a94effe2a452592c766bedb2bc88040afccc643f",
+  "structure_sha256_after": "c6fe804622a7b0769dd8be15a94effe2a452592c766bedb2bc88040afccc643f",
+  "changes": [
+    {
+      "key": "positive_prompt",
+      "node_id": "6",
+      "input": "text",
+      "old": "old positive",
+      "new": "cinematic approved still, subtle breathing, controlled head turn"
+    },
+    {
+      "key": "negative_prompt",
+      "node_id": "7",
+      "input": "text",
+      "old": "old negative",
+      "new": "identity drift, temporal warping, malformed hands"
+    },
+    {
+      "key": "source_image",
+      "node_id": "57",
+      "input": "image",
+      "old": "old.png",
+      "new": "shot_03_approved.png"
+    },
+    {
+      "key": "width",
+      "node_id": "55",
+      "input": "width",
+      "old": 1280,
+      "new": 1280
+    },
+    {
+      "key": "height",
+      "node_id": "55",
+      "input": "height",
+      "old": 704,
+      "new": 704
+    },
+    {
+      "key": "frame_length",
+      "node_id": "55",
+      "input": "length",
+      "old": 49,
+      "new": 121
+    },
+    {
+      "key": "fps",
+      "node_id": "47",
+      "input": "fps",
+      "old": 24.0,
+      "new": 24.0
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+archetype_visual_spec:
+  identity:
+    role: null
+    setting: null
+  archetype:
+    label: null
+    motive_energy: null
+    contradiction: null
+  visual_translation:
+    dominant_shape_family: null
+    proportion_strategy: null
+    face_strategy: null
+    pose_strategy: null
+    prop_strategy: null
+    costume_attitude: null
+    color_hierarchy: null
+  validation:
+    familiar_anchor: null
+    differentiating_twist: null
+    readability_risk: null

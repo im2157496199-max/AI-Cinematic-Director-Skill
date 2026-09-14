@@ -1,0 +1,25 @@
+# Character Embodiment Validator
+
+- [ ] Personality has been translated into visible behavior, not left as adjectives.
+- [ ] Archetype, if used, has been translated into motive/energy and visible consequences.
+- [ ] Character has at least one familiar anchor and one differentiating twist when memorability matters.
+- [ ] Current objective/action is defined before pose styling.
+- [ ] Base facial identity survives emotion changes.
+- [ ] Gaze has a target and matches the intended relationship.
+- [ ] Shoulder, wrist, elbow, hand and torso belong to one coherent action chain.
+- [ ] Hand gesture is not pasted independently onto the body.
+- [ ] Torso/ribcage and pelvis orientations are mechanically plausible.
+- [ ] Center of gravity and support/contact points are readable.
+- [ ] Sitting/lying/kneeling poses visibly contact their support surface.
+- [ ] Strong emotion propagates into the body unless restraint is intentional.
+- [ ] Expression amplitude matches character personality and scene intensity.
+- [ ] Hair/clothing react to motion without destroying identity/faction continuity.
+- [ ] Props are actually held/used with plausible contact and role meaning.
+- [ ] Same-pose characters remain distinguishable through behavior channels.
+- [ ] Camera angle/gaze relation supports rather than reverses the intended emotion.
+- [ ] New characters are not differentiated by hair color alone.
+- [ ] Skin base, hair mass, eye accent and outfit palette form a readable hierarchy.
+- [ ] Group/ensemble characters remain distinct through more than color.
+- [ ] Visual package remains recognizable even outside explicit story context.
+- [ ] Historical trends and project style references are used as guidance, not hard mandates.
+- [ ] Period-specific styling or franchise examples do not silently override project intent.

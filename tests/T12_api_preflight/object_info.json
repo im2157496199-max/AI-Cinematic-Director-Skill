@@ -1,0 +1,8 @@
+{
+  "KSampler": {"input":{"required":{"model":["MODEL"],"seed":["INT",{"min":0}],"steps":["INT",{"min":1}],"cfg":["FLOAT"],"sampler_name":[["euler","uni_pc"]],"scheduler":[["normal","simple"]],"positive":["CONDITIONING"],"negative":["CONDITIONING"],"latent_image":["LATENT"],"denoise":["FLOAT"]}},"output":["LATENT"]},
+  "CheckpointLoaderSimple": {"input":{"required":{"ckpt_name":[["v1-5-pruned-emaonly.safetensors","v1-5-pruned-emaonly-fp16.safetensors"]]}},"output":["MODEL","CLIP","VAE"]},
+  "EmptyLatentImage": {"input":{"required":{"width":["INT"],"height":["INT"],"batch_size":["INT"]}},"output":["LATENT"]},
+  "CLIPTextEncode": {"input":{"required":{"text":["STRING"],"clip":["CLIP"]}},"output":["CONDITIONING"]},
+  "VAEDecode": {"input":{"required":{"samples":["LATENT"],"vae":["VAE"]}},"output":["IMAGE"]},
+  "SaveImage": {"input":{"required":{"filename_prefix":["STRING"],"images":["IMAGE"]}},"output":[]}
+}

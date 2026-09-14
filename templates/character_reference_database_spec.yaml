@@ -1,0 +1,21 @@
+character_reference_database:
+  query:
+    archetype: null
+    role: null
+    attributes: []
+    visual_features: []
+
+  retrieved_reference:
+    similar_characters: []
+    shared_attributes: []
+    differences_to_preserve: []
+
+  conversion:
+    visible_behavior: []
+    silhouette_change: []
+    color_change: []
+    costume_change: []
+
+  warning:
+    - "Do not copy attributes directly as a finished character"
+    - "Use references for inspiration and differentiation"

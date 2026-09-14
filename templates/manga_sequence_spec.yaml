@@ -1,0 +1,102 @@
+manga_sequence_spec:
+  project_id: null
+  source_story_spec: "templates/story_spec.yaml"
+  entity_sheet_ref: "templates/entity_sheet.yaml"
+
+  format:
+    output_type: manga_sequence   # manga_sequence | comic_page | anime_stills | storyboard
+    reading_direction: rtl        # rtl | ltr | vertical
+    page_count: null
+    target_panel_count: null
+    aspect_or_page_size: null
+
+  core_diagnostic:
+    primary_emphasis: character   # character | story | story_world | theme | mixed
+    character: null
+    story: null
+    story_world: null
+    theme: null
+    visual_expression: null
+    dialogue_role: null
+
+  opening_hook:
+    immediate_interest: null
+    orientation_5w1h: null
+    novelty: null
+    unresolved_question: null
+    experience_promise: null
+    first_memorable_image: null
+
+  page_budget:
+    important_moments:
+      - id: M01
+        importance: P0
+        reason: null
+        allocated_panels: 1
+        desired_pacing: normal   # fast | normal | slow | freeze
+
+  name_pass:
+    status: draft
+    cheap_representation: thumbnails
+    page_turns: []
+    reveal_positions: []
+    orientation_plan: null
+    emotional_reaction_plan: []
+    removable_panels: []
+
+  pages:
+    - id: P01
+      purpose: null
+      rhythm: null
+      panels:
+        - id: P01_01
+          importance: P1
+          story_beat_ids: []
+          moment: null
+          visible_action: null
+          emotional_read: null
+          primary_information: null
+          secondary_information: []
+          framing: null
+          panel_scale: medium
+          panel_shape: regular
+          reader_attention_first: null
+          characters: []
+          location: null
+          dialogue: []
+          sfx: []
+          orientation_state: {}
+          continuity_in: {}
+          continuity_out: {}
+          video_promotion: consider
+
+  forward_motion:
+    opening_state: {}
+    closing_state: {}
+    net_changes:
+      knowledge: null
+      danger: null
+      trust: null
+      status: null
+      access: null
+      freedom: null
+      commitment: null
+      capability: null
+      emotional_stance: null
+
+  edit_sequence_spec_ref: "templates/edit_sequence_spec.yaml"
+
+  manga_to_video:
+    enabled: false
+    selected_panel_ids: []
+    temporal_invention_allowed:
+      camera_motion: true
+      subject_motion: true
+      transition_motion: true
+    locked_meaning:
+      identity: true
+      costume: true
+      key_props: true
+      spatial_relation: true
+      story_result: true
+      emotional_meaning: true

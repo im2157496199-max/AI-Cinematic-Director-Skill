@@ -1,0 +1,162 @@
+production_design_spec:
+  project_id: null
+  space_design_spec_ref: "templates/space_design_spec.yaml"
+  light_color_spec_ref: "templates/light_color_spec.yaml"
+  source_story_spec: "templates/story_spec.yaml"
+  character_bible_ref: "templates/character_bible.yaml"
+  entity_sheet_ref: "templates/entity_sheet.yaml"
+
+  design_intent:
+    one_line_concept: null
+    directorial_pov: null
+    psychological_image: null
+    atmosphere: null
+    desired_audience_feeling: null
+    primary_metaphor: null
+    supporting_motifs: []
+    anti_generic_rule: null
+    visibility_mode: supportive_invisible  # supportive_invisible | expressive_visible | spectacle_forward
+    organizing_polarity:
+      enabled: false
+      axis: null
+      side_a: null
+      side_b: null
+      visual_channels: []
+
+  style:
+    style_mode: reference_driven
+    selected_style: null
+    style_references: []
+    prohibited_auto_styles: []
+    realism_level: null
+    stylization_notes: null
+
+  temporal_identity:
+    story_time: null
+    strategy: null  # surface_accuracy | period_spirit | selective_shorthand | stylized_reinterpretation | mixed
+    dominant_characteristic: null
+    iconographic_shortcuts_to_avoid: []
+    production_era_bias_check: []
+    present_day_trend_noise_to_avoid: []
+
+  visual_progression:
+    sequence_map: []
+    recurring_motifs:
+      - motif: null
+        appearances: []
+        meaning_progression: []
+    spatial_pattern_breaks: []
+
+  research_board:
+    factual_period_cultural: []
+    spatial_architecture: []
+    material_texture: []
+    palette_light_interaction: []
+    psychological_atmosphere: []
+    character_lifestyle: []
+    metaphor_motif: []
+
+  palette:
+    dominant: []
+    supporting: []
+    accent: []
+    restricted_or_absent: []
+    character_links: {}
+    location_links: {}
+    story_progression: []
+
+  locations:
+    - id: LOC01
+      name: null
+      story_function: null
+      related_characters: []
+      relationship_to_character: null
+      desired_audience_feeling: null
+      psychological_effect: null
+      narrative_agency: supportive  # background | supportive | active_character | antagonist
+      source_strategy: null  # observed_real | transformed_real | constructed | hybrid | virtual
+      why_this_place: null
+      curated_signals:
+        emphasize: []
+        suppress: []
+        stereotype_or_cliche_risks: []
+      learned_geography:
+        established_routes: []
+        ownership_or_status_zones: []
+        expected_access: []
+        deliberate_breaks: []
+
+      architecture:
+        scale: null
+        compression_openness: null
+        verticality: null
+        hierarchy: null
+        axes: []
+        symmetry: null
+        circulation: null
+        thresholds: []
+        staging_zones: []
+        sightlines: []
+        foreground_midground_background: null
+        camera_opportunities: []
+        negative_space_policy: null
+        deliberate_omissions: []
+
+      material_language:
+        - material: null
+          finish: null
+          roughness_reflectivity: null
+          age: null
+          wear_pattern: null
+          maintenance_level: null
+          environmental_effect: null
+          story_meaning: null
+
+      decor:
+        identity_objects: []
+        furniture_language: null
+        organization_level: null
+        signs_of_use: []
+        clutter_policy: null
+
+      props:
+        story_critical: []
+        character_signature: []
+        world_authenticating: []
+        atmosphere_only: []
+
+      lighting_interaction:
+        practical_sources: []
+        reflective_surfaces: []
+        color_conflicts: []
+        exposure_or_visibility_risks: []
+
+      continuity_locks:
+        fixed_architectural_features: []
+        fixed_materials: []
+        fixed_palette_elements: []
+        fixed_props: []
+
+  digital_execution:
+    can_transform_location: true
+    can_create_virtual_environment: true
+    can_age_or_retexture: true
+    can_replace_materials: true
+    can_recolor: true
+    constraints:
+      preserve_depth: true
+      preserve_scale_logic: true
+      preserve_character_space_relation: true
+      preserve_story_function: true
+      preserve_continuity: true
+
+  approval_gate:
+    concept_clear: false
+    references_sufficient: false
+    key_environments_distinct: false
+    character_space_relationships_defined: false
+    palette_has_purpose: false
+    materials_not_generic: false
+    signature_props_defined: false
+    architecture_camera_compatible: false
+    style_selected_or_reference_driven: false

@@ -1,0 +1,39 @@
+{
+  "bindings": {
+    "positive_prompt": {
+      "node_id": "6",
+      "expected_class_type": "CLIPTextEncode",
+      "input": "text"
+    },
+    "negative_prompt": {
+      "node_id": "7",
+      "expected_class_type": "CLIPTextEncode",
+      "input": "text"
+    },
+    "source_image": {
+      "node_id": "57",
+      "expected_class_type": "LoadImage",
+      "input": "image"
+    },
+    "width": {
+      "node_id": "55",
+      "expected_class_type": "Wan22ImageToVideoLatent",
+      "input": "width"
+    },
+    "height": {
+      "node_id": "55",
+      "expected_class_type": "Wan22ImageToVideoLatent",
+      "input": "height"
+    },
+    "frame_length": {
+      "node_id": "55",
+      "expected_class_type": "Wan22ImageToVideoLatent",
+      "input": "length"
+    },
+    "fps": {
+      "node_id": "47",
+      "expected_class_type": "SaveWEBM",
+      "input": "fps"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+character_differentiation:
+  character_id: null
+  references: []
+
+  identity_channels:
+    head_silhouette: null
+    base_eye_family: null
+    gaze_quality: null
+    expression_amplitude: null
+    hair_mass_and_texture: null
+    signature_accessory: null
+
+  body_channels:
+    relative_height: null
+    frame: null
+    stance_tendency: null
+    movement_amplitude: null
+    occupied_space: null
+
+  wardrobe_channels:
+    faction_uniform_lock: null
+    wear_attitude: null
+    formality: null
+    layering: null
+    shoes: null
+    personal_objects: []
+
+  color_roles:
+    dominant: null
+    support: []
+    accent: null
+    neutral: null
+
+  behavior_channels:
+    gesture_amplitude: null
+    hand_tension: null
+    personal_distance: null
+    prop_handling: null
+    reaction_latency: null
+    approach_retreat: null
+
+  ensemble:
+    group_id: null
+    contrast_axes: []
+    relationship_role: null
+    gaze_relation: null
+    spacing_relation: null
+    touch_relation: null
+    movement_order: null
+
+  anthropomorphism_optional:
+    enabled: false
+    motif: null
+    extracted_shape: null
+    extracted_color: null
+    extracted_texture: null
+    extracted_function: null
+    extracted_motion: null
+    selected_cues: []

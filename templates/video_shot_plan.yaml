@@ -1,0 +1,90 @@
+video_shot_plan:
+  shot_id: null
+  source_shot_spec_ref: null
+  source_image_ref: null
+  approved_still: false
+  entity_lock_snapshot_ref: null
+
+  narrative:
+    purpose: null
+    event: null
+    start_state: {}
+    middle_state: {}
+    end_state: {}
+
+  temporal:
+    target_duration_s: null
+    target_fps: null
+    target_frames_raw: null
+    adapter_length: null
+    actual_duration_s: null
+    duration_delta_s: null
+    duration_source: shot_plan      # shot_plan | audio | source_video
+
+  subject_motion:
+    amplitude: low                  # low | medium | high
+    phases: []
+    hold_windows: []
+    prop_motion: []
+
+  camera:
+    intent: static
+    movement: static
+    speed_intent: low
+    adapter_mapping: null
+    mapping_quality: exact          # exact | approximation | unbound
+
+  audio:
+    mode: native                    # native | custom | voice_clone | foley | none
+    dialogue_text: null
+    custom_audio_ref: null
+    reference_audio_ref: null
+    voice_reference_text: null
+    audio_drives_duration: false
+
+  control_requirements:
+    identity_reference_required: true
+    pose_control_required: false
+    canny_control_required: false
+    depth_or_composition_control_required: false
+    first_last_frame_control_required: false
+    middle_keyframe_control_required: false
+    camera_control_required: false
+    source_video_required: false
+
+  keyframes:
+    start_image_ref: null
+    middle_image_ref: null
+    end_image_ref: null
+
+  execution_preferences:
+    gguf_required: false
+    gguf_preferred: false
+    low_vram_required: false
+    low_vram_preferred: false
+    upscale: prefer                # required | prefer | avoid | forbidden
+    sampler_preview_required: false
+
+  workflow:
+    model_family: null
+    profile_id: null
+    reference_case_id: null
+    binding_ref: null
+    compile_status: pending
+    verification_status: DISCOVERED
+    unbound_requirements: []
+
+  ltx2_planning:
+    enabled: false
+    requested_mode: null           # image_to_video | text_to_video | video_to_video | video_to_audio
+    keyframe_mode: start_only      # start_only | start_end | start_middle_end
+    controls: []                   # pose | canny | depth
+    selected_reference_case: null
+    reference_case_production_ready: false
+    api_export_required: true
+    object_info_preflight_required: true
+
+  output:
+    api_workflow_ref: null
+    expected_video_ref: null
+    expected_audio_ref: null

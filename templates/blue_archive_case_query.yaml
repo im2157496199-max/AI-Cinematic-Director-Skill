@@ -1,0 +1,21 @@
+blue_archive_case_query:
+  task_type: null
+  named_student: null
+  school_or_faction: null
+  requested_variant: null
+  user_style_override: null
+  load:
+    student_reference: true
+    school_dna: true
+    environment_cases: false
+    illustration_cases: false
+    ui_cases: false
+  identity_locks:
+    face_hair_halo: true
+    signature_prop: true
+    dominant_palette_relation: true
+  freedom:
+    pose: true
+    camera: true
+    lighting: true
+    environment: true

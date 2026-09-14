@@ -1,0 +1,31 @@
+official_template_profile:
+  profile_id: null
+  source:
+    kind: official_core_template
+    repository: Comfy-Org/workflow_templates
+    path: null
+    url: null
+    observed_workflow_json_version: null
+    imported_at: null
+  runtime_reference:
+    comfyui_version: null
+    template_package_version: null
+  graph:
+    root_node_count: null
+    subgraph_count: null
+    core_node_types: []
+    non_core_node_types: []
+    promoted_inputs: []
+  capabilities: []
+  dependencies_manifest_ref: null
+  ui_template_snapshot_ref: null
+  api_workflow_ref: null
+  binding_ref: null
+  verification:
+    status: DISCOVERED
+    loaded_in_comfyui: false
+    run_verified: false
+    api_exported: false
+    binding_verified: false
+    regression_pass: false
+  notes: []

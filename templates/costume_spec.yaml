@@ -1,0 +1,56 @@
+costume_spec:
+  project_id: null
+  character_id: null
+  case_library_refs: []
+  purpose:
+    role_or_occupation: null
+    current_activity: null
+    faction_or_social_identity: null
+    location_or_world_context: null
+    story_state_or_milestone: null
+    function: null
+  constraints:
+    required_features: []
+    forbidden_features: []
+    action_mobility_needs: []
+    output_scale: null
+    primary_view_angle: null
+  readability:
+    silhouette: null
+    large_color_value_masses: []
+    signature_layer_or_accessory: null
+    medium_details: []
+    small_details: []
+  layers:
+    - id: L1
+      name: null
+      body_region: null
+      over_under_relation: null
+      attachment_or_closure: null
+      material_family: null
+      stiffness_or_drape: null
+      movement_behavior: null
+      continuity_critical_details: []
+  accessories:
+    signature: []
+    functional: []
+    decorative: []
+  palette_pattern:
+    palette_ref: null
+    dominant_colors: []
+    accent_colors: []
+    patterns_or_motifs: []
+  style_sheet:
+    required_views: []
+    material_callouts: []
+    accessory_callouts: []
+    reference_notes: []
+    motif_notes: []
+  continuity_state:
+    outfit_id: null
+    damage: null
+    dirt: null
+    wetness: null
+    open_closed_states: {}
+    removed_or_equipped_items: []
+    transformation_state: null

@@ -1,0 +1,80 @@
+character_bible:
+  # Narrative / behavioral identity. Visual identity remains in entity_sheet.yaml.
+  characters:
+    - id: protagonist
+      story_function: hero
+
+      core:
+        life_desire: null
+        story_desire: null
+        psychological_need: null
+        moral_need: null
+        values: []
+
+      manga_readability:
+        one_line_identity: null
+        signature_behavior: []
+        role_specific_research: []
+        unlikely_or_forbidden_phrasing: []
+        cast_contrasts: []
+        # Visual silhouette / costume identity remains in entity_sheet.
+
+      characterization:
+        # Observable mask / surface identity. Visual appearance itself belongs in entity_sheet.
+        mannerisms: []
+        social_style: null
+        occupation_or_role: null
+        attitudes: []
+        outward_traits: []
+
+      true_character:
+        # Reveal through consequential choices under pressure.
+        pressure_choices:
+          - situation: null
+            stakes: null
+            available_choices: []
+            chosen_action: null
+            what_it_reveals: null
+        consistent_contradictions: []
+
+      five_cornerstones:
+        desire: null
+        frustration_or_obstacle_pattern: null
+        contradiction: null
+        vulnerability_or_wound: null
+        secret: null
+
+      adaptations_and_defenses: []
+      consequential_backstory_events: []
+
+      behavior_signature:
+        default_adjustments: []
+        habits_or_tics: []
+        under_pressure: null
+        when_praised: null
+        when_rejected: null
+        toward_authority: null
+        toward_weaker_people: null
+
+      relational_modes:
+        # Example:
+        # friend: teasing_but_protective
+        # authority: outwardly_cooperative_inwardly_resistant
+        {}
+
+      voice:
+        sentence_length: null
+        directness: null
+        vocabulary: null
+        rhythm: null
+        humor_or_deflection: null
+        taboo_or_avoidance: []
+        recurring_phrases: []
+
+      arc:
+        starting_belief: null
+        challenged_belief: null
+        self_revelation: null
+        ending_state: null
+
+      visual_entity_ref: "templates/entity_sheet.yaml#characters"

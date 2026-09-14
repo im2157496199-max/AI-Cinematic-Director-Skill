@@ -1,0 +1,71 @@
+sequence_spec:
+  # real stateful multi-shot structure.
+  scene_purpose: ""
+  whose_film: null
+  scene_owner: null
+  circumstance: null
+  predominant_pov: null
+  viewer_placement: null
+
+  character_spines: {}
+  entity_sheet_ref: null
+
+  dramatic_blocks:
+    - id: B1
+      purpose: ""
+      start_condition: null
+      end_condition: null
+      beat_ids: []
+
+  narrative_beats:
+    - id: N1
+      event: ""
+      dramatic_change: ""
+      importance: normal   # normal | high | fulcrum
+      shot_candidate: true
+
+  fulcrum:
+    beat_id: null
+    event: null
+    emphasis: high
+
+  shots:
+    - id: S01
+      shot_spec_ref: null
+      beat_ids: []
+      inherit_from_previous: true
+      allowed_state_changes: []
+
+  continuity_mode: conventional
+  continuity_state:
+    action_axis: null
+    screen_direction: null
+    important_gaze_relations: []
+    locked_visible_states: []
+    identity_locks: []
+    costume_locks: []
+    prop_ownership: {}
+    environment_locks: []
+    unresolved_state_changes: []
+
+  shot_flow:
+    progression: null
+    shot_size_pattern: null
+    movement_pattern: null
+    reveal_plan: null
+
+  coverage:
+    core: []
+    optional_backup: []
+
+  visual_progression: null
+
+  video_sequence_plan_ref: null
+
+# State Authority Rule
+
+# shot_spec.yaml is the authoritative source for start_state/end_state.
+# sequence_spec entries are derived cache views only.
+# If conflict occurs:
+# shot_spec wins.
+

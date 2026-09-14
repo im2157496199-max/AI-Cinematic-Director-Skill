@@ -1,0 +1,50 @@
+{
+  "187": {
+    "class_type": "INTConstant",
+    "inputs": {
+      "value": 241
+    }
+  },
+  "195": {
+    "class_type": "INTConstant",
+    "inputs": {
+      "value": 720
+    }
+  },
+  "194": {
+    "class_type": "INTConstant",
+    "inputs": {
+      "value": 1280
+    }
+  },
+  "121": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "REAL_UI_WIDGET_VALUE_PLACEHOLDER",
+      "clip": [
+        "900",
+        0
+      ]
+    }
+  },
+  "110": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "",
+      "clip": [
+        "900",
+        0
+      ]
+    }
+  },
+  "167": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "ComfyUI_14741_.png"
+    }
+  },
+  "900": {
+    "class_type": "DummyClip",
+    "inputs": {}
+  }
+}

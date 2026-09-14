@@ -1,0 +1,106 @@
+{
+  "wan_core_i2v": {
+    "model_family": "wan",
+    "capabilities": [
+      "image_to_video"
+    ],
+    "length": {
+      "step": 4,
+      "base": 1
+    },
+    "width_step": 16,
+    "height_step": 16,
+    "core_nodes": [
+      "WanImageToVideo"
+    ]
+  },
+  "wan22_core_latent_i2v": {
+    "model_family": "wan2.2",
+    "capabilities": [
+      "image_to_video"
+    ],
+    "length": {
+      "step": 4,
+      "base": 1
+    },
+    "width_step": 32,
+    "height_step": 32,
+    "core_nodes": [
+      "Wan22ImageToVideoLatent"
+    ]
+  },
+  "wan_core_first_last": {
+    "model_family": "wan",
+    "capabilities": [
+      "image_to_video",
+      "first_last_frame"
+    ],
+    "length": {
+      "step": 4,
+      "base": 1
+    },
+    "width_step": 16,
+    "height_step": 16,
+    "core_nodes": [
+      "WanFirstLastFrameToVideo"
+    ]
+  },
+  "wan_core_camera": {
+    "model_family": "wan",
+    "capabilities": [
+      "camera_control"
+    ],
+    "length": {
+      "step": 4,
+      "base": 1
+    },
+    "width_step": 16,
+    "height_step": 16,
+    "core_nodes": [
+      "WanCameraEmbedding"
+    ],
+    "camera_pose_values": [
+      "Static",
+      "Pan Up",
+      "Pan Down",
+      "Pan Left",
+      "Pan Right",
+      "Zoom In",
+      "Zoom Out",
+      "Anti Clockwise (ACW)",
+      "ClockWise (CW)"
+    ]
+  },
+  "ltx_core_i2v": {
+    "model_family": "ltxv",
+    "capabilities": [
+      "image_to_video",
+      "conditioning_strength"
+    ],
+    "length": {
+      "step": 8,
+      "base": 1,
+      "min": 9
+    },
+    "width_step": 32,
+    "height_step": 32,
+    "core_nodes": [
+      "LTXVImgToVideo"
+    ]
+  },
+  "hunyuan15_core_i2v": {
+    "model_family": "hunyuan_video_1.5",
+    "capabilities": [
+      "image_to_video"
+    ],
+    "length": {
+      "step": 4,
+      "base": 1
+    },
+    "width_step": 16,
+    "height_step": 16,
+    "core_nodes": [
+      "HunyuanVideo15ImageToVideo"
+    ]
+  }
+}

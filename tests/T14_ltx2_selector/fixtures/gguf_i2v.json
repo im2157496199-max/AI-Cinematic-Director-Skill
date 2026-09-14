@@ -1,0 +1,5 @@
+{
+  "mode": "image_to_video",
+  "gguf_required": true,
+  "upscale": "prefer"
+}

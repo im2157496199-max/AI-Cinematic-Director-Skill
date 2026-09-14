@@ -1,0 +1,7 @@
+{
+  "values": {
+    "positive_prompt": "approved-shot prompt",
+    "negative_prompt": "artifact, drift",
+    "seed": 5
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "fixture-subgraph",
+  "revision": 0,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "inputs": [],
+      "outputs": [{"name":"IMAGE","type":"IMAGE","links":[1]}],
+      "properties": {"cnr_id":"comfy-core","ver":"0.3.60"},
+      "widgets_values": ["fixture_start.png", "image"]
+    },
+    {
+      "id": 11,
+      "type": "sg-fixture-uuid",
+      "inputs": [
+        {"label":"prompt","name":"text","type":"STRING","widget":{"name":"text"},"link":null},
+        {"label":"duration","name":"duration","type":"FLOAT","widget":{"name":"duration"},"link":null},
+        {"name":"start_image","type":"IMAGE","link":1}
+      ],
+      "outputs": [{"name":"VIDEO","type":"VIDEO","links":[2]}],
+      "properties": {
+        "cnr_id":"comfy-core",
+        "ver":"0.13.0",
+        "proxyWidgets": [[101,"text"],[102,"length"]]
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 12,
+      "type": "SaveVideo",
+      "inputs": [{"name":"video","type":"VIDEO","link":2}],
+      "outputs": [],
+      "properties": {"cnr_id":"comfy-core","ver":"0.3.60"},
+      "widgets_values": ["video/test","auto","auto"]
+    }
+  ],
+  "links": [[1,10,0,11,2,"IMAGE"],[2,11,0,12,0,"VIDEO"]],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id":"sg-fixture-uuid",
+        "name":"Fixture Image to Video",
+        "nodes":[
+          {
+            "id":101,
+            "type":"CLIPTextEncode",
+            "inputs":[],
+            "outputs":[],
+            "properties":{"cnr_id":"comfy-core","ver":"0.3.60"},
+            "widgets_values":["fixture prompt"]
+          },
+          {
+            "id":102,
+            "type":"WanImageToVideo",
+            "inputs":[],
+            "outputs":[],
+            "properties":{
+              "cnr_id":"comfy-core",
+              "ver":"0.3.60",
+              "models":[{
+                "name":"fixture_subgraph_model.safetensors",
+                "url":"https://huggingface.co/example/fixture/resolve/main/fixture_subgraph_model.safetensors",
+                "directory":"diffusion_models"
+              }]
+            },
+            "widgets_values":[640,640,81,1]
+          }
+        ]
+      }
+    ]
+  },
+  "groups": [],
+  "config": {},
+  "extra": {"frontendVersion":"1.49.6"},
+  "version": 0.4
+}

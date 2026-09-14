@@ -1,0 +1,11 @@
+{
+  "values": {
+    "positive_prompt": "cinematic approved still, subtle breathing, controlled head turn",
+    "negative_prompt": "identity drift, temporal warping, malformed hands",
+    "source_image": "shot_03_approved.png",
+    "width": 1280,
+    "height": 704,
+    "frame_length": 121,
+    "fps": 24.0
+  }
+}

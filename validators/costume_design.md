@@ -1,0 +1,14 @@
+# Costume Design Validator
+- [ ] Outfit has a clear purpose beyond “looks cool.”
+- [ ] Costume communicates role/world/state without exposition only.
+- [ ] Silhouette survives intended viewing distance/scale.
+- [ ] Major layers have understandable over/under and attachment logic.
+- [ ] Material choice changes drape/movement appropriately.
+- [ ] Signature accessories are prioritized; random ornament does not bury identity.
+- [ ] Variants still belong to the same world/faction when intended.
+- [ ] Cross-cultural inspiration is transformed rather than pasted together.
+- [ ] Style sheet includes the views/callouts needed for consistent regeneration.
+- [ ] Dominant camera/viewing angle is checked when relevant.
+- [ ] Costume state is continuous across panels/shots unless story-driven.
+- [ ] Historical examples are not auto-loaded as project style.
+- [ ] Setting-book/case-library style can shape costume without overwriting continuity locks.

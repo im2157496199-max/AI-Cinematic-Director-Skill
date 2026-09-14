@@ -1,0 +1,15 @@
+ltx2_workflow_requirements:
+  mode: image_to_video             # image_to_video | text_to_video | video_to_video | video_to_audio
+  keyframes: start_only            # start_only | start_end | start_middle_end
+  controls: []                     # pose | canny | depth
+  audio_mode: native               # native | custom | voice_clone | foley | none
+  upscale: prefer                  # required | prefer | avoid | forbidden
+  gguf_required: false
+  gguf_preferred: false
+  low_vram_required: false
+  low_vram_preferred: false
+  sampler_preview_required: false
+  policy:
+    prefer_minimum_complexity: true
+    allow_community_reference_for_planning: true
+    community_reference_is_production_ready: false

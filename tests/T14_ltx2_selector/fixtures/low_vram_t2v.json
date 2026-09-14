@@ -1,0 +1,5 @@
+{
+  "mode": "text_to_video",
+  "low_vram_required": true,
+  "upscale": "prefer"
+}

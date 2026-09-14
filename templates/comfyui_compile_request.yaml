@@ -1,0 +1,23 @@
+comfyui_compile_request:
+  workflow_profile_id: null
+  shot_id: null
+  approved_still_ref: null
+  values:
+    positive_prompt: null
+    negative_prompt: null
+    source_image: null
+    end_image: null
+    width: null
+    height: null
+    frame_length: null
+    fps: null
+    seed: null
+    steps: null
+    cfg: null
+    camera_pose: null
+    camera_speed: null
+  execution:
+    backend: self_hosted_server_api
+    preflight_object_info: true
+    upload_assets_first: true
+    monitor_mode: websocket_history

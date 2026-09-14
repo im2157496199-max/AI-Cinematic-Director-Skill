@@ -1,0 +1,28 @@
+source_study:
+  name: appvikalabs/LTX-2-Workflows
+  repository_url: https://github.com/appvikalabs/LTX-2-Workflows
+  branch: upstream
+  branch_head_checked_utc: 2026-08-24
+  branch_head_sha: 739d7e9e5db868a57eedf87a1865d35c6d9f6816
+  uploaded_archive:
+    filename: LTX-2-Workflows-upstream (1)(1).zip
+    sha256: fd99ce019f55525c671b791cad089db86c7d05a60db3d1948e9444c635210638
+    workflow_files_parsed: 19
+  repository_license:
+    license_file_detected_in_uploaded_archive: false
+    github_license_field_observed: null
+    policy: >-
+      Treat source workflows as study material and provenance-linked reference cases.
+      Do not redistribute the raw third-party workflow JSON files inside this Skill package.
+  authority:
+    tier: community_reference_case
+    not_equal_to: official_current_ltx2_contract
+    rationale: >-
+      The repository README itself points users to ComfyUI and LTX-Video official workflows.
+      Current Lightricks ComfyUI-LTXVideo documentation lists LTX-2.3 workflows separately
+      and marks LTX-2.0 examples as older workflows, so these examples are used for pattern
+      learning, selector design, dependency recognition, and binding heuristics rather than
+      as universal current requirements.
+  build_basis:
+    inherited_package: null  # historical package filename intentionally removed from final format
+    inherited_sha256: c5928fc7b802fe83e3ff43c8dc009a7c309df2295a7f8c435221140af4923526

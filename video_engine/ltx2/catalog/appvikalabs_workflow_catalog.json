@@ -1,0 +1,3964 @@
+{
+  "schema": "ltx2_repo_catalog/v1",
+  "source": {
+    "path": "user_supplied_archive:LTX-2-Workflows-upstream (1)(1).zip",
+    "archive_sha256": "fd99ce019f55525c671b791cad089db86c7d05a60db3d1948e9444c635210638"
+  },
+  "workflow_count": 19,
+  "workflows": [
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - First Last Frame (guide node).json",
+      "sha256": "126824de03a935cce28f16d1118ffde7024e37af33610f5753d9606cabe9e33a",
+      "size_bytes": 105133,
+      "workflow_format_version": 0.4,
+      "node_count": 103,
+      "link_count": 99,
+      "group_count": 10,
+      "groups": [
+        "Sampler 1st pass",
+        "Prompt",
+        "Prepare Frames",
+        "Sampler 2nd pass (upscale)",
+        "LTX Latent",
+        "Compare",
+        "SETTINGS",
+        "Models",
+        "Frames",
+        "Decode"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "Fast Groups Bypasser (rgthree)": 1,
+        "GetImageSize": 1,
+        "GetNode": 26,
+        "INTConstant": 3,
+        "ImageConcatMulti": 2,
+        "ImageResizeKJv2": 2,
+        "ImageScaleBy": 4,
+        "KSamplerSelect": 2,
+        "LTXVAddGuideMulti": 1,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVCropGuides": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 1,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 2,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadImage": 2,
+        "LoraLoaderModelOnly": 2,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "PathchSageAttentionKJ": 1,
+        "PrimitiveFloat": 1,
+        "RandomNoise": 2,
+        "ResizeImagesByLongerEdge": 2,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 16,
+        "SimpleCalculatorKJ": 1,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 2
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfyui-kjnodes": [
+          "37bda1000e75e5649c224b0b4a8a6f57093ef925",
+          "3e3a1a8aac61dc4515f6a7da74e026f05a80299f",
+          "42bdf92f9ab7e3d78381c022eaa3b4341c528d72",
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "93a4fba44c1635a716dc262f157a7ded7d716f3a",
+          "c8e7f48a7f68b7a31ee336bc0be54bedbca05ffa"
+        ],
+        "comfyui-videohelpersuite": [
+          "993082e4f2473bf4acaf06f51e33877a7eb38960"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 63,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 64,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 65,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 90,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 75,
+          "title": "Set_firstframe",
+          "semantic_key": "firstframe"
+        },
+        {
+          "node_id": 78,
+          "title": "Set_lastframe",
+          "semantic_key": "lastframe"
+        },
+        {
+          "node_id": 97,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 98,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 100,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 102,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 103,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 125,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 126,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 152,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        },
+        {
+          "node_id": 153,
+          "title": "Set_final_video",
+          "semantic_key": "final_video"
+        },
+        {
+          "node_id": 154,
+          "title": "Set_final_audio",
+          "semantic_key": "final_audio"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 95,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 94,
+          "title": "About  Models",
+          "char_count": 69,
+          "text_sha256": "f1dd4510d0b42ab745fc6d9cd3f34a6748f49f3a5fc7c4fd715e855527d250eb"
+        },
+        {
+          "node_id": 96,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "first_last_frame",
+        "image_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - First Last Frame (in-place node).json",
+      "sha256": "df1e957115377b7d7e40d29959bac70b0178f699bc81447a5596d09857e18974",
+      "size_bytes": 104577,
+      "workflow_format_version": 0.4,
+      "node_count": 103,
+      "link_count": 97,
+      "group_count": 10,
+      "groups": [
+        "Sampler 1st pass",
+        "Prompt",
+        "Prepare Frames",
+        "Sampler 2nd pass (upscale)",
+        "LTX Latent",
+        "Compare",
+        "SETTINGS",
+        "Models",
+        "Frames",
+        "Decode"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "Fast Groups Bypasser (rgthree)": 1,
+        "GetImageSize": 1,
+        "GetNode": 26,
+        "INTConstant": 3,
+        "ImageConcatMulti": 2,
+        "ImageResizeKJv2": 2,
+        "ImageScaleBy": 4,
+        "KSamplerSelect": 2,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVCropGuides": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 1,
+        "LTXVImgToVideoInplaceKJ": 1,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 2,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadImage": 2,
+        "LoraLoaderModelOnly": 2,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "PathchSageAttentionKJ": 1,
+        "PrimitiveFloat": 1,
+        "RandomNoise": 2,
+        "ResizeImagesByLongerEdge": 2,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 16,
+        "SimpleCalculatorKJ": 1,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 2
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfyui-kjnodes": [
+          "37bda1000e75e5649c224b0b4a8a6f57093ef925",
+          "3e3a1a8aac61dc4515f6a7da74e026f05a80299f",
+          "42bdf92f9ab7e3d78381c022eaa3b4341c528d72",
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "71578cf49e48978cf1c6714494b669b1e571777b",
+          "93a4fba44c1635a716dc262f157a7ded7d716f3a"
+        ],
+        "comfyui-videohelpersuite": [
+          "993082e4f2473bf4acaf06f51e33877a7eb38960"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 63,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 64,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 65,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 90,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 75,
+          "title": "Set_firstframe",
+          "semantic_key": "firstframe"
+        },
+        {
+          "node_id": 78,
+          "title": "Set_lastframe",
+          "semantic_key": "lastframe"
+        },
+        {
+          "node_id": 97,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 98,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 100,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 102,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 103,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 125,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 126,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 152,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        },
+        {
+          "node_id": 153,
+          "title": "Set_final_video",
+          "semantic_key": "final_video"
+        },
+        {
+          "node_id": 154,
+          "title": "Set_final_audio",
+          "semantic_key": "final_audio"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 95,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 94,
+          "title": "About  Models",
+          "char_count": 69,
+          "text_sha256": "f1dd4510d0b42ab745fc6d9cd3f34a6748f49f3a5fc7c4fd715e855527d250eb"
+        },
+        {
+          "node_id": 96,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "first_last_frame",
+        "image_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - First Middle Last Frame (guide node).json",
+      "sha256": "6cd1fe0faacedcde6b007319c7e1807cc62d10d03d89722c07403a445410cb55",
+      "size_bytes": 115066,
+      "workflow_format_version": 0.4,
+      "node_count": 113,
+      "link_count": 110,
+      "group_count": 10,
+      "groups": [
+        "Sampler 1st pass",
+        "Prompt",
+        "Prepare Frames",
+        "Sampler 2nd pass (upscale)",
+        "LTX Latent",
+        "Compare",
+        "SETTINGS",
+        "Models",
+        "Frames",
+        "Decode"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "Fast Groups Bypasser (rgthree)": 1,
+        "GetImageSize": 1,
+        "GetNode": 29,
+        "INTConstant": 3,
+        "ImageConcatMulti": 2,
+        "ImageResizeKJv2": 3,
+        "ImageScaleBy": 5,
+        "KSamplerSelect": 2,
+        "LTXVAddGuideMulti": 1,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVCropGuides": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 1,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 3,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadImage": 3,
+        "LoraLoaderModelOnly": 2,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "PathchSageAttentionKJ": 1,
+        "PrimitiveFloat": 1,
+        "RandomNoise": 2,
+        "ResizeImagesByLongerEdge": 3,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 17,
+        "SimpleCalculatorKJ": 2,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 2
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfyui-kjnodes": [
+          "37bda1000e75e5649c224b0b4a8a6f57093ef925",
+          "3e3a1a8aac61dc4515f6a7da74e026f05a80299f",
+          "42bdf92f9ab7e3d78381c022eaa3b4341c528d72",
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "93a4fba44c1635a716dc262f157a7ded7d716f3a",
+          "c8e7f48a7f68b7a31ee336bc0be54bedbca05ffa"
+        ],
+        "comfyui-videohelpersuite": [
+          "993082e4f2473bf4acaf06f51e33877a7eb38960"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 63,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 64,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 65,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 90,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 75,
+          "title": "Set_firstframe",
+          "semantic_key": "firstframe"
+        },
+        {
+          "node_id": 76,
+          "title": "Set_middleframe",
+          "semantic_key": "middleframe"
+        },
+        {
+          "node_id": 78,
+          "title": "Set_lastframe",
+          "semantic_key": "lastframe"
+        },
+        {
+          "node_id": 97,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 98,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 100,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 102,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 103,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 125,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 126,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 152,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        },
+        {
+          "node_id": 153,
+          "title": "Set_final_video",
+          "semantic_key": "final_video"
+        },
+        {
+          "node_id": 154,
+          "title": "Set_final_audio",
+          "semantic_key": "final_audio"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 95,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 94,
+          "title": "About  Models",
+          "char_count": 69,
+          "text_sha256": "f1dd4510d0b42ab745fc6d9cd3f34a6748f49f3a5fc7c4fd715e855527d250eb"
+        },
+        {
+          "node_id": 96,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "first_last_frame",
+        "first_middle_last_frame",
+        "image_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - I2V Basic (GGUF).json",
+      "sha256": "492eb36d7b161280a2665f018dac1571d02858705d78508668550b70e10aba07",
+      "size_bytes": 91027,
+      "workflow_format_version": 0.4,
+      "node_count": 84,
+      "link_count": 74,
+      "group_count": 8,
+      "groups": [
+        "Sampler - Second Pass Upscale",
+        "Decode",
+        "Input Image",
+        "Group",
+        "Prompt",
+        "Prepare LTX Latent",
+        "Sampler - First Pass",
+        "Video Settings"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 22,
+        "INTConstant": 3,
+        "ImageResizeKJv2": 1,
+        "KSamplerSelect": 2,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 2,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadImage": 1,
+        "LoraLoaderModelOnly": 1,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "PathchSageAttentionKJ": 1,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 1,
+        "ResizeImagesByLongerEdge": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 17,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "4dfb85dcc52e4315c33170d97bb987baa46d128b",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 186,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 192,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 193,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 188,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 213,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 215,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 216,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 223,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 240,
+          "title": "Set_latent_audio",
+          "semantic_key": "latent_audio"
+        },
+        {
+          "node_id": 226,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 227,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 238,
+          "title": "Set_latent",
+          "semantic_key": "latent"
+        },
+        {
+          "node_id": 209,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        },
+        {
+          "node_id": 234,
+          "title": "Set_height_downsized",
+          "semantic_key": "height_downsized"
+        },
+        {
+          "node_id": 233,
+          "title": "Set_width_downsized",
+          "semantic_key": "width_downsized"
+        },
+        {
+          "node_id": 211,
+          "title": "Set_compress_image",
+          "semantic_key": "compress_image"
+        },
+        {
+          "node_id": 248,
+          "title": "Set_resize_image",
+          "semantic_key": "resize_image"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 251,
+          "title": "About  Models",
+          "char_count": 69,
+          "text_sha256": "f1dd4510d0b42ab745fc6d9cd3f34a6748f49f3a5fc7c4fd715e855527d250eb"
+        },
+        {
+          "node_id": 250,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 253,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "gguf",
+        "image_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - I2V Basic (custom audio).json",
+      "sha256": "171be4c86722ca3c9c864290cf55094e1e76d8db4fe7cf6aa0c3718d049b40a1",
+      "size_bytes": 114690,
+      "workflow_format_version": 0.4,
+      "node_count": 111,
+      "link_count": 95,
+      "group_count": 9,
+      "groups": [
+        "Sampler - Second Pass Upscale",
+        "Decode",
+        "Input Image",
+        "Group",
+        "Prompt",
+        "Prepare LTX Latent",
+        "Sampler - First Pass",
+        "Video Settings",
+        "Custom Audio"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "ComfySwitchNode": 1,
+        "DualCLIPLoader": 1,
+        "DualCLIPLoaderGGUF": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 31,
+        "INTConstant": 3,
+        "ImageResizeKJv2": 1,
+        "KSamplerSelect": 2,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVAudioVAEEncode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 2,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadAudio": 1,
+        "LoadImage": 1,
+        "LoraLoaderModelOnly": 1,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "MelBandRoFormerModelLoader": 1,
+        "MelBandRoFormerSampler": 1,
+        "Note": 1,
+        "PathchSageAttentionKJ": 1,
+        "PrimitiveFloat": 1,
+        "RandomNoise": 2,
+        "Reroute": 1,
+        "ResizeImageMaskNode": 1,
+        "ResizeImagesByLongerEdge": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetLatentNoiseMask": 1,
+        "SetNode": 20,
+        "SimpleCalculatorKJ": 1,
+        "SimpleMath+": 1,
+        "SolidMask": 1,
+        "TrimAudioDuration": 1,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "ComfyUI-MelBandRoFormer": [
+          "b40e263224778ec417114d91d8b3b39934e30de5"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "4dfb85dcc52e4315c33170d97bb987baa46d128b",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e",
+          "c8e7f48a7f68b7a31ee336bc0be54bedbca05ffa"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2"
+        ],
+        "comfyui_essentials": [
+          "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "MelBandRoformer/MelBandRoformer_fp16.safetensors",
+        "gemma3-12b-it-q2_k.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_dev_bf16.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 186,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 192,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 193,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 188,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 213,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 215,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 216,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 223,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 240,
+          "title": "Set_latent_audio",
+          "semantic_key": "latent_audio"
+        },
+        {
+          "node_id": 226,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 227,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 238,
+          "title": "Set_latent",
+          "semantic_key": "latent"
+        },
+        {
+          "node_id": 209,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        },
+        {
+          "node_id": 234,
+          "title": "Set_height_downsized",
+          "semantic_key": "height_downsized"
+        },
+        {
+          "node_id": 233,
+          "title": "Set_width_downsized",
+          "semantic_key": "width_downsized"
+        },
+        {
+          "node_id": 211,
+          "title": "Set_compress_image",
+          "semantic_key": "compress_image"
+        },
+        {
+          "node_id": 248,
+          "title": "Set_resize_image",
+          "semantic_key": "resize_image"
+        },
+        {
+          "node_id": 257,
+          "title": "Set_org_audio",
+          "semantic_key": "org_audio"
+        },
+        {
+          "node_id": 266,
+          "title": "Set_latent_custom_audio",
+          "semantic_key": "latent_custom_audio"
+        },
+        {
+          "node_id": 277,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 250,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 253,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        },
+        {
+          "node_id": 265,
+          "title": "Mel-Band RoFormer Model Loader Download link",
+          "char_count": 95,
+          "text_sha256": "73d61ea2e1735de4e4eb4a3684a4c0a7cfc2d5a1924701722eb09ca7ae6b94b8"
+        },
+        {
+          "node_id": 251,
+          "title": "About  Models",
+          "char_count": 119,
+          "text_sha256": "8005f9629aa5173626767d8b518461051e7e04ab50a4c0e681833fa0917c07b0"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "custom_audio",
+        "image_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - I2V Basic.json",
+      "sha256": "4fa0e4149f7459c44875e54e77fc738246126320d7ec4b424eb5e83aa492d578",
+      "size_bytes": 91904,
+      "workflow_format_version": 0.4,
+      "node_count": 85,
+      "link_count": 74,
+      "group_count": 8,
+      "groups": [
+        "Sampler - Second Pass Upscale",
+        "Decode",
+        "Input Image",
+        "Group",
+        "Prompt",
+        "Prepare LTX Latent",
+        "Sampler - First Pass",
+        "Video Settings"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 22,
+        "INTConstant": 3,
+        "ImageResizeKJv2": 1,
+        "KSamplerSelect": 2,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 2,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadImage": 1,
+        "LoraLoaderModelOnly": 1,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "PathchSageAttentionKJ": 1,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 1,
+        "ResizeImagesByLongerEdge": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 17,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "4dfb85dcc52e4315c33170d97bb987baa46d128b",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 186,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 192,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 193,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 188,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 213,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 215,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 216,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 223,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 240,
+          "title": "Set_latent_audio",
+          "semantic_key": "latent_audio"
+        },
+        {
+          "node_id": 226,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 227,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 238,
+          "title": "Set_latent",
+          "semantic_key": "latent"
+        },
+        {
+          "node_id": 209,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        },
+        {
+          "node_id": 234,
+          "title": "Set_height_downsized",
+          "semantic_key": "height_downsized"
+        },
+        {
+          "node_id": 233,
+          "title": "Set_width_downsized",
+          "semantic_key": "width_downsized"
+        },
+        {
+          "node_id": 211,
+          "title": "Set_compress_image",
+          "semantic_key": "compress_image"
+        },
+        {
+          "node_id": 248,
+          "title": "Set_resize_image",
+          "semantic_key": "resize_image"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 251,
+          "title": "About  Models",
+          "char_count": 69,
+          "text_sha256": "f1dd4510d0b42ab745fc6d9cd3f34a6748f49f3a5fc7c4fd715e855527d250eb"
+        },
+        {
+          "node_id": 250,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 253,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "image_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - I2V IC-Control (pose).json",
+      "sha256": "58804e9b9ff1a4497b54e948f233dd241b6f3820dc096a36e4ea81009411cabd",
+      "size_bytes": 142583,
+      "workflow_format_version": 0.4,
+      "node_count": 125,
+      "link_count": 111,
+      "group_count": 13,
+      "groups": [
+        "Group",
+        "Peformance (optional)",
+        "Prompt",
+        "IC Control input",
+        "Compare",
+        "Decode",
+        "Video Settings",
+        "LTX Latent",
+        "Group",
+        "Lora",
+        "Sampler - Second Pass Upscale",
+        "Sampler - First Pass",
+        "Distill lora"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "CM_FloatToInt": 1,
+        "ComfySwitchNode": 2,
+        "DWPreprocessor": 1,
+        "DualCLIPLoader": 1,
+        "DualCLIPLoaderGGUF": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "Fast Groups Bypasser (rgthree)": 1,
+        "GetImageSize": 1,
+        "GetNode": 40,
+        "INTConstant": 4,
+        "ImageConcatMulti": 2,
+        "ImageResizeKJv2": 1,
+        "KSamplerSelect": 2,
+        "LTXVAddGuide": 1,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVCropGuides": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 2,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadImage": 1,
+        "LoraLoaderModelOnly": 2,
+        "ManualSigmas": 1,
+        "MarkdownNote": 4,
+        "Power Lora Loader (rgthree)": 1,
+        "PrimitiveFloat": 1,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 3,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 20,
+        "SimpleCalculatorKJ": 1,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_LoadVideo": 1,
+        "VHS_VideoCombine": 3
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfymath": [
+          "c01177221c31b8e5fbc062778fc8254aeb541638"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "4dfb85dcc52e4315c33170d97bb987baa46d128b",
+          "bb1d9d5d2259497a1d26e051f32af866043de77a",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e",
+          "ff7f876c09ff5a53be051073c3c1731b96ee31a3"
+        ],
+        "comfyui-videohelpersuite": [
+          "0a75c7958fe320efcb052f1d9f8451fd20c730a8",
+          "1.7.7",
+          "4f804bb23f3292609b6b42527cb1f015e52ef83e",
+          "993082e4f2473bf4acaf06f51e33877a7eb38960"
+        ],
+        "comfyui_controlnet_aux": [
+          "136f125c89aed92ced1b6fbb491e13719b72fcc0"
+        ],
+        "rgthree-comfy": [
+          "8ff50e4521881eca1fe26aec9615fc9362474931"
+        ]
+      },
+      "models_observed": [
+        "LTX/ltxv-098-ic-lora-detailer-comfyui.safetensors",
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX/v2/ltx-2-19b-ic-lora-canny-control.safetensors",
+        "LTX/v2/ltx-2-19b-ic-lora-depth-control.safetensors",
+        "LTX/v2/ltx-2-19b-ic-lora-pose-control.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-static.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "dw-ll_ucoco_384_bs5.torchscript.pt",
+        "gemma3-12b-it-q2_k.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_dev_bf16.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 249,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 250,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 251,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 252,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 298,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 299,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 300,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 301,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 333,
+          "title": "Set_height_downsized",
+          "semantic_key": "height_downsized"
+        },
+        {
+          "node_id": 334,
+          "title": "Set_width_downsized",
+          "semantic_key": "width_downsized"
+        },
+        {
+          "node_id": 343,
+          "title": "Set_start_image",
+          "semantic_key": "start_image"
+        },
+        {
+          "node_id": 287,
+          "title": "Set_ref_audio",
+          "semantic_key": "ref_audio"
+        },
+        {
+          "node_id": 321,
+          "title": "Set_video_output",
+          "semantic_key": "video_output"
+        },
+        {
+          "node_id": 289,
+          "title": "Set_ref_pose",
+          "semantic_key": "ref_pose"
+        },
+        {
+          "node_id": 359,
+          "title": "Set_audio_output",
+          "semantic_key": "audio_output"
+        },
+        {
+          "node_id": 332,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        },
+        {
+          "node_id": 267,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 335,
+          "title": "Set_resize_image",
+          "semantic_key": "resize_image"
+        },
+        {
+          "node_id": 327,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 326,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 261,
+          "title": "About  Models",
+          "char_count": 123,
+          "text_sha256": "6e2275bed2faee2ca827b58adb4e96c3346bd9810b3d15daf0e696acfa4003f8"
+        },
+        {
+          "node_id": 371,
+          "title": "About loras",
+          "char_count": 85,
+          "text_sha256": "add941126e2f71326b224f7bf74ab27561740de324cc5aa132eca207a82c4bdc"
+        },
+        {
+          "node_id": 253,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 254,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "ic_control",
+        "image_to_video",
+        "pose_control",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - I2V Simple (no upscale).json",
+      "sha256": "a90fc74063b69729357b1c6a2d39b5960db001446f1d6a8c579e61c7d8c5677d",
+      "size_bytes": 57010,
+      "workflow_format_version": 0.4,
+      "node_count": 46,
+      "link_count": 44,
+      "group_count": 4,
+      "groups": [
+        "Image",
+        "Models",
+        "Sampler",
+        "Prompt"
+      ],
+      "node_types": {
+        "BasicScheduler": 1,
+        "CFGGuider": 1,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetNode": 9,
+        "INTConstant": 3,
+        "ImageResizeKJv2": 1,
+        "KSamplerSelect": 1,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVConcatAVLatent": 1,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 1,
+        "LTXVPreprocess": 1,
+        "LTXVSeparateAVLatent": 1,
+        "LoadImage": 1,
+        "PathchSageAttentionKJ": 1,
+        "RandomNoise": 1,
+        "SamplerCustomAdvanced": 1,
+        "SetNode": 9,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "f083506720f2f049631ed6b6e937440f5579f6c7"
+        ],
+        "comfyui-kjnodes": [
+          "204f6d5aae73b10c0fe2fb26e61405fd6337bb77",
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+        ],
+        "comfyui-videohelpersuite": [
+          "3234937ff5f3ca19068aaba5042771514de2429d"
+        ]
+      },
+      "models_observed": [
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-distilled_Q6_K.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 252,
+          "title": "Set_audio_vae",
+          "semantic_key": "audio_vae"
+        },
+        {
+          "node_id": 280,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 282,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 293,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 295,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 296,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 228,
+          "title": "Set_video_vae",
+          "semantic_key": "video_vae"
+        },
+        {
+          "node_id": 355,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 356,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        }
+      ],
+      "notes": [],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "image_to_video",
+        "single_stage_no_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - I2V Simple (with upscale)",
+      "sha256": "8ff55ba93b8c9412e83bc44d82202f8706734e9bc2639da397caf0e3f023618b",
+      "size_bytes": 67734,
+      "workflow_format_version": 0.4,
+      "node_count": 65,
+      "link_count": 67,
+      "group_count": 6,
+      "groups": [
+        "Model",
+        "Basic Sampler",
+        "Prompt",
+        "Upscale",
+        "Image",
+        "LTX"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 14,
+        "INTConstant": 3,
+        "ImageResizeKJv2": 1,
+        "ImageScaleBy": 1,
+        "KSamplerSelect": 2,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVCropGuides": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 2,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadImage": 1,
+        "LoraLoaderModelOnly": 1,
+        "ManualSigmas": 1,
+        "RandomNoise": 2,
+        "ResizeImagesByLongerEdge": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 9,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "f083506720f2f049631ed6b6e937440f5579f6c7"
+        ],
+        "comfyui-kjnodes": [
+          "37bda1000e75e5649c224b0b4a8a6f57093ef925",
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+        ],
+        "comfyui-videohelpersuite": [
+          "993082e4f2473bf4acaf06f51e33877a7eb38960"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-distilled_Q6_K.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 56,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 57,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 58,
+          "title": "Set_video_vae",
+          "semantic_key": "video_vae"
+        },
+        {
+          "node_id": 59,
+          "title": "Set_audio_vae",
+          "semantic_key": "audio_vae"
+        },
+        {
+          "node_id": 75,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 86,
+          "title": "Set_up_model",
+          "semantic_key": "up_model"
+        },
+        {
+          "node_id": 64,
+          "title": "Set_image",
+          "semantic_key": "image"
+        },
+        {
+          "node_id": 81,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 80,
+          "title": "Set_width",
+          "semantic_key": "width"
+        }
+      ],
+      "notes": [],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "image_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - I2V Talking Avatar (voice clone Qwen-TTS).json",
+      "sha256": "11d3c2f87baeab4974d3bad93d19d37eb2cfc7ecb44548953fa1513dee7ed830",
+      "size_bytes": 120786,
+      "workflow_format_version": 0.4,
+      "node_count": 112,
+      "link_count": 99,
+      "group_count": 13,
+      "groups": [
+        "Sampler - Second Pass Upscale",
+        "Decode",
+        "Input Image",
+        "Group",
+        "Prompt",
+        "Prepare LTX Latent",
+        "Sampler - First Pass",
+        "Video Settings",
+        "Voice Clone",
+        "Vocal stem only (optional)",
+        "LTX latent audio",
+        "Audio duration to video length (frames)",
+        "Distill lora"
+      ],
+      "node_types": {
+        "AILab_Qwen3TTSVoiceClone": 1,
+        "Audio Duration (mtb)": 1,
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "DualCLIPLoaderGGUF": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 29,
+        "INTConstant": 2,
+        "ImageResizeKJv2": 1,
+        "KSamplerSelect": 2,
+        "LTX2AudioLatentNormalizingSampling": 1,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVAudioVAEEncode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 2,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadAudio": 1,
+        "LoadImage": 1,
+        "LoraLoaderModelOnly": 3,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "MelBandRoFormerModelLoader": 1,
+        "MelBandRoFormerSampler": 1,
+        "PreviewAudio": 1,
+        "PrimitiveFloat": 1,
+        "PrimitiveStringMultiline": 2,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 1,
+        "ResizeImagesByLongerEdge": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetLatentNoiseMask": 1,
+        "SetNode": 18,
+        "SimpleCalculatorKJ": 1,
+        "SimpleMath+": 1,
+        "SolidMask": 1,
+        "TrimAudioDuration": 1,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1,
+        "VRAM_Debug": 1,
+        "easy showAnything": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "ComfyUI-MelBandRoFormer": [
+          "260cb03c4da37aaf20ef3ab5ad5805e1e0eafd38"
+        ],
+        "ComfyUI-QwenTTS": [
+          "8538f201fd412bf37d8354ba11815f4d1687b855"
+        ],
+        "comfy-mtb": [
+          "00fbad37c52ec71c7923b50e019eec29c441ae12"
+        ],
+        "comfyui-easy-use": [
+          "b5e31ef12ad9d0b187b545c2707735cc7d581c52"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "4dfb85dcc52e4315c33170d97bb987baa46d128b",
+          "71578cf49e48978cf1c6714494b669b1e571777b",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2"
+        ],
+        "comfyui_essentials": [
+          "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-static.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "MelBandRoformer/MelBandRoformer_fp16.safetensors",
+        "gemma3-12b-it-q2_k.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_dev_bf16.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 192,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 193,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 188,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 213,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 215,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 216,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 226,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 227,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 238,
+          "title": "Set_latent",
+          "semantic_key": "latent"
+        },
+        {
+          "node_id": 209,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        },
+        {
+          "node_id": 211,
+          "title": "Set_compress_image",
+          "semantic_key": "compress_image"
+        },
+        {
+          "node_id": 248,
+          "title": "Set_resize_image",
+          "semantic_key": "resize_image"
+        },
+        {
+          "node_id": 277,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 305,
+          "title": "Set_latent_custom_audio",
+          "semantic_key": "latent_custom_audio"
+        },
+        {
+          "node_id": 223,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 347,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 233,
+          "title": "Set_width_downsized",
+          "semantic_key": "width_downsized"
+        },
+        {
+          "node_id": 234,
+          "title": "Set_height_downsized",
+          "semantic_key": "height_downsized"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 250,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 251,
+          "title": "About  Models",
+          "char_count": 162,
+          "text_sha256": "dfe29ba4ad0f874e4b205fcf8570e333203ee018e434e3fcc08cff58689fc025"
+        },
+        {
+          "node_id": 253,
+          "title": "Prompting LTX-2",
+          "char_count": 111,
+          "text_sha256": "95a1aeaa5742a585af96da8d74876ddc8375653ecbebad435682f89ec8486d98"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "image_to_video",
+        "talking_avatar",
+        "two_stage_upscale",
+        "voice_clone"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - I2V and T2V (beta test sampler previews).json",
+      "sha256": "81df4b7d9e83097c28e0c663e065b07df37fb645f851e72237f564f61c13b5c6",
+      "size_bytes": 118340,
+      "workflow_format_version": 0.4,
+      "node_count": 110,
+      "link_count": 98,
+      "group_count": 14,
+      "groups": [
+        "Input Image",
+        "Prompt",
+        "Prepare LTX Latent",
+        "Video Settings",
+        "Loras (camera, style, detailer etc)",
+        "Group",
+        "Performance (experimental)",
+        "Sampler - Second Pass Upscale",
+        "Decode",
+        "Sampler - First Pass",
+        "NAG - optional",
+        "NAG - optional",
+        "Distilled lora (if Dev model)",
+        "T2V - Text to video mode"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "DualCLIPLoaderGGUF": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 30,
+        "INTConstant": 3,
+        "ImageResizeKJv2": 1,
+        "KSamplerSelect": 2,
+        "LTX2AttentionTunerPatch": 1,
+        "LTX2AudioLatentNormalizingSampling": 1,
+        "LTX2MemoryEfficientSageAttentionPatch": 1,
+        "LTX2SamplingPreviewOverride": 2,
+        "LTX2_NAG": 2,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 2,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadImage": 1,
+        "LoraLoaderModelOnly": 2,
+        "ManualSigmas": 1,
+        "MarkdownNote": 4,
+        "Power Lora Loader (rgthree)": 1,
+        "PrimitiveBoolean": 1,
+        "PrimitiveFloat": 1,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 1,
+        "ResizeImagesByLongerEdge": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 20,
+        "SimpleCalculatorKJ": 1,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 2,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfyui-kjnodes": [
+          "17282f9cff7c4f7d3c50fcea5061fad4d87d6aea",
+          "17cddd4959f00182c66954be2a7a32a6481d81be",
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "4dfb85dcc52e4315c33170d97bb987baa46d128b",
+          "71578cf49e48978cf1c6714494b669b1e571777b",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2"
+        ],
+        "rgthree-comfy": [
+          "8ff50e4521881eca1fe26aec9615fc9362474931"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX/v2/ltx-2-19b-ic-lora-detailer.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-dolly-in.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-dolly-left.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-dolly-out.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-dolly-right.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-jib-down.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-jib-up.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-static.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "gemma3-12b-it-q2_k.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_dev_bf16.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors",
+        "taeltx_2.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 192,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 193,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 213,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 216,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 226,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 227,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 209,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        },
+        {
+          "node_id": 234,
+          "title": "Set_height_downsized",
+          "semantic_key": "height_downsized"
+        },
+        {
+          "node_id": 233,
+          "title": "Set_width_downsized",
+          "semantic_key": "width_downsized"
+        },
+        {
+          "node_id": 248,
+          "title": "Set_resize_image",
+          "semantic_key": "resize_image"
+        },
+        {
+          "node_id": 271,
+          "title": "Set_vae_tiny",
+          "semantic_key": "vae_tiny"
+        },
+        {
+          "node_id": 285,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 282,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 342,
+          "title": "Set_latent_audio",
+          "semantic_key": "latent_audio"
+        },
+        {
+          "node_id": 345,
+          "title": "Set_latent",
+          "semantic_key": "latent"
+        },
+        {
+          "node_id": 350,
+          "title": "Set_compress_image",
+          "semantic_key": "compress_image"
+        },
+        {
+          "node_id": 188,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 186,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 215,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 379,
+          "title": "Set_t2v_mode",
+          "semantic_key": "t2v_mode"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 250,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 251,
+          "title": "About  Models",
+          "char_count": 123,
+          "text_sha256": "6e2275bed2faee2ca827b58adb4e96c3346bd9810b3d15daf0e696acfa4003f8"
+        },
+        {
+          "node_id": 253,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        },
+        {
+          "node_id": 294,
+          "title": "Video settings",
+          "char_count": 197,
+          "text_sha256": "7014efe07006fc92a22e368792ef72adca323b0316260e0025749334a16cdade"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "image_to_video",
+        "sampler_preview",
+        "text_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - I2V and T2V IC-Control (All-In-One Pose Canny Depth).json",
+      "sha256": "c65c9993efc481c3bdacba35343637f9795408d61755fcc66f4de017e303aece",
+      "size_bytes": 182678,
+      "workflow_format_version": 0.4,
+      "node_count": 164,
+      "link_count": 144,
+      "group_count": 16,
+      "groups": [
+        "Group",
+        "Peformance (optional)",
+        "Prompt",
+        "POSE control",
+        "Compare",
+        "Decode",
+        "Video Settings",
+        "LTX Latent",
+        "Group",
+        "Lora",
+        "Sampler - Second Pass Upscale",
+        "Sampler - First Pass",
+        "Distill lora",
+        "Enable T2V mode",
+        "CANNY control",
+        "DEPTH control"
+      ],
+      "node_types": {
+        "Any Switch (rgthree)": 2,
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "CM_FloatToInt": 1,
+        "CannyEdgePreprocessor": 1,
+        "ComfySwitchNode": 2,
+        "DWPreprocessor": 1,
+        "DepthAnythingV2Preprocessor": 1,
+        "DualCLIPLoader": 1,
+        "DualCLIPLoaderGGUF": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "Fast Groups Bypasser (rgthree)": 2,
+        "GetImageSize": 1,
+        "GetNode": 58,
+        "INTConstant": 4,
+        "ImageConcatMulti": 2,
+        "ImageResizeKJv2": 1,
+        "KSamplerSelect": 2,
+        "LTXVAddGuide": 1,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVCropGuides": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVImgToVideoInplace": 2,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadImage": 1,
+        "LoraLoaderModelOnly": 2,
+        "ManualSigmas": 1,
+        "MarkdownNote": 4,
+        "Power Lora Loader (rgthree)": 1,
+        "PrimitiveBoolean": 1,
+        "PrimitiveFloat": 1,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 7,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 27,
+        "SimpleCalculatorKJ": 1,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_LoadVideo": 3,
+        "VHS_VideoCombine": 5
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfymath": [
+          "c01177221c31b8e5fbc062778fc8254aeb541638"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "4dfb85dcc52e4315c33170d97bb987baa46d128b",
+          "bb1d9d5d2259497a1d26e051f32af866043de77a",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e",
+          "ff7f876c09ff5a53be051073c3c1731b96ee31a3"
+        ],
+        "comfyui-videohelpersuite": [
+          "0a75c7958fe320efcb052f1d9f8451fd20c730a8",
+          "1.7.7",
+          "4f804bb23f3292609b6b42527cb1f015e52ef83e",
+          "993082e4f2473bf4acaf06f51e33877a7eb38960"
+        ],
+        "comfyui_controlnet_aux": [
+          "136f125c89aed92ced1b6fbb491e13719b72fcc0"
+        ],
+        "rgthree-comfy": [
+          "8ff50e4521881eca1fe26aec9615fc9362474931"
+        ]
+      },
+      "models_observed": [
+        "LTX/ltxv-098-ic-lora-detailer-comfyui.safetensors",
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX/v2/ltx-2-19b-ic-lora-canny-control.safetensors",
+        "LTX/v2/ltx-2-19b-ic-lora-depth-control.safetensors",
+        "LTX/v2/ltx-2-19b-ic-lora-pose-control.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-static.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-distilled_Q8_0.gguf",
+        "depth_anything_v2_vitl.pth",
+        "dw-ll_ucoco_384_bs5.torchscript.pt",
+        "gemma3-12b-it-q2_k.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_dev_bf16.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 249,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 250,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 251,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 252,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 298,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 299,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 300,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 301,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 333,
+          "title": "Set_height_downsized",
+          "semantic_key": "height_downsized"
+        },
+        {
+          "node_id": 334,
+          "title": "Set_width_downsized",
+          "semantic_key": "width_downsized"
+        },
+        {
+          "node_id": 343,
+          "title": "Set_start_image",
+          "semantic_key": "start_image"
+        },
+        {
+          "node_id": 321,
+          "title": "Set_video_output",
+          "semantic_key": "video_output"
+        },
+        {
+          "node_id": 359,
+          "title": "Set_audio_output",
+          "semantic_key": "audio_output"
+        },
+        {
+          "node_id": 332,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        },
+        {
+          "node_id": 267,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 335,
+          "title": "Set_resize_image",
+          "semantic_key": "resize_image"
+        },
+        {
+          "node_id": 327,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 326,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 423,
+          "title": "Set_t2v_mode",
+          "semantic_key": "t2v_mode"
+        },
+        {
+          "node_id": 289,
+          "title": "Set_ref_pose",
+          "semantic_key": "ref_pose"
+        },
+        {
+          "node_id": 446,
+          "title": "Set_ref_depth",
+          "semantic_key": "ref_depth"
+        },
+        {
+          "node_id": 456,
+          "title": "Set_ref_control",
+          "semantic_key": "ref_control"
+        },
+        {
+          "node_id": 434,
+          "title": "Set_ref_canny",
+          "semantic_key": "ref_canny"
+        },
+        {
+          "node_id": 287,
+          "title": "Set_ref_audio_pose",
+          "semantic_key": "ref_audio_pose"
+        },
+        {
+          "node_id": 427,
+          "title": "Set_ref_audio_canny",
+          "semantic_key": "ref_audio_canny"
+        },
+        {
+          "node_id": 439,
+          "title": "Set_ref_audio_depth",
+          "semantic_key": "ref_audio_depth"
+        },
+        {
+          "node_id": 461,
+          "title": "Set_ref_audio",
+          "semantic_key": "ref_audio"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 261,
+          "title": "About  Models",
+          "char_count": 123,
+          "text_sha256": "6e2275bed2faee2ca827b58adb4e96c3346bd9810b3d15daf0e696acfa4003f8"
+        },
+        {
+          "node_id": 253,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 371,
+          "title": "About loras",
+          "char_count": 273,
+          "text_sha256": "977cade87de7373b5b71d620ddf8ecc6234a4f7264ce43738495e50fd56cd6ff"
+        },
+        {
+          "node_id": 254,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "canny_control",
+        "depth_control",
+        "ic_control",
+        "image_to_video",
+        "pose_control",
+        "text_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - T2V Basic (GGUF).json",
+      "sha256": "38df2c91d2647743018a6eff1918795af44053a3716746088b51bc8395b6786a",
+      "size_bytes": 77488,
+      "workflow_format_version": 0.4,
+      "node_count": 68,
+      "link_count": 59,
+      "group_count": 7,
+      "groups": [
+        "Sampler - Second Pass Upscale",
+        "Decode",
+        "Group",
+        "Prompt",
+        "Prepare LTX Latent",
+        "Sampler - First Pass",
+        "Video Settings"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "EmptyImage": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 16,
+        "INTConstant": 3,
+        "KSamplerSelect": 2,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVLatentUpsampler": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoraLoaderModelOnly": 1,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "PathchSageAttentionKJ": 1,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 11,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 186,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 192,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 193,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 188,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 213,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 215,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 216,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 223,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 226,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 227,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 238,
+          "title": "Set_latent",
+          "semantic_key": "latent"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 251,
+          "title": "About  Models",
+          "char_count": 69,
+          "text_sha256": "f1dd4510d0b42ab745fc6d9cd3f34a6748f49f3a5fc7c4fd715e855527d250eb"
+        },
+        {
+          "node_id": 250,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 253,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "gguf",
+        "text_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - T2V Basic (custom audio).json",
+      "sha256": "6dca4c6e967cd863f700b855483a31da8b2bb89a6402c842a977891c0e6592aa",
+      "size_bytes": 101479,
+      "workflow_format_version": 0.4,
+      "node_count": 96,
+      "link_count": 81,
+      "group_count": 8,
+      "groups": [
+        "Sampler - Second Pass Upscale",
+        "Decode",
+        "Group",
+        "Prompt",
+        "Prepare LTX Latent",
+        "Sampler - First Pass",
+        "Video Settings",
+        "Custom Audio"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "ComfySwitchNode": 1,
+        "DualCLIPLoader": 1,
+        "DualCLIPLoaderGGUF": 1,
+        "EmptyImage": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 26,
+        "INTConstant": 3,
+        "KSamplerSelect": 2,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVAudioVAEEncode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVLatentUpsampler": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadAudio": 1,
+        "LoraLoaderModelOnly": 1,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "MelBandRoFormerModelLoader": 1,
+        "MelBandRoFormerSampler": 1,
+        "Note": 1,
+        "PathchSageAttentionKJ": 1,
+        "PrimitiveFloat": 1,
+        "RandomNoise": 2,
+        "Reroute": 1,
+        "ResizeImageMaskNode": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetLatentNoiseMask": 1,
+        "SetNode": 15,
+        "SimpleCalculatorKJ": 2,
+        "SolidMask": 1,
+        "TrimAudioDuration": 1,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "ComfyUI-MelBandRoFormer": [
+          "b40e263224778ec417114d91d8b3b39934e30de5"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e",
+          "c8e7f48a7f68b7a31ee336bc0be54bedbca05ffa"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "MelBandRoformer/MelBandRoformer_fp16.safetensors",
+        "gemma3-12b-it-q2_k.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_dev_bf16.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 186,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 192,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 193,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 188,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 213,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 215,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 216,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 223,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 226,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 227,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 258,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 260,
+          "title": "Set_org_audio",
+          "semantic_key": "org_audio"
+        },
+        {
+          "node_id": 265,
+          "title": "Set_latent_custom_audio",
+          "semantic_key": "latent_custom_audio"
+        },
+        {
+          "node_id": 238,
+          "title": "Set_latent",
+          "semantic_key": "latent"
+        },
+        {
+          "node_id": 283,
+          "title": "Set_latent_audio",
+          "semantic_key": "latent_audio"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 250,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 253,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        },
+        {
+          "node_id": 266,
+          "title": "Mel-Band RoFormer Model Loader Download link",
+          "char_count": 95,
+          "text_sha256": "73d61ea2e1735de4e4eb4a3684a4c0a7cfc2d5a1924701722eb09ca7ae6b94b8"
+        },
+        {
+          "node_id": 251,
+          "title": "About  Models",
+          "char_count": 119,
+          "text_sha256": "8005f9629aa5173626767d8b518461051e7e04ab50a4c0e681833fa0917c07b0"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "custom_audio",
+        "text_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - T2V Basic (low vram).json",
+      "sha256": "bebebf3c2821d12a18ae2f4cfaf027c6d75add5c066cc66fb0ccb487953e551b",
+      "size_bytes": 81730,
+      "workflow_format_version": 0.4,
+      "node_count": 71,
+      "link_count": 61,
+      "group_count": 7,
+      "groups": [
+        "Sampler - Second Pass Upscale",
+        "Decode",
+        "Group",
+        "Prompt",
+        "Prepare LTX Latent",
+        "Sampler - First Pass",
+        "Video Settings"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "DualCLIPLoaderGGUF": 1,
+        "EmptyImage": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 16,
+        "INTConstant": 3,
+        "KSamplerSelect": 2,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVLatentUpsampler": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoraLoaderModelOnly": 1,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "PathchSageAttentionKJ": 1,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 11,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1,
+        "VRAM_Debug": 2
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e",
+          "c8e7f48a7f68b7a31ee336bc0be54bedbca05ffa"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-distilled_Q4_K_M.gguf",
+        "gemma3-12b-it-q2_k.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 186,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 192,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 193,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 188,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 213,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 215,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 216,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 223,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 226,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 227,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 238,
+          "title": "Set_latent",
+          "semantic_key": "latent"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 250,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 253,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        },
+        {
+          "node_id": 251,
+          "title": "About  Models",
+          "char_count": 131,
+          "text_sha256": "9e21d6405eae8829bed37a8e404540a794c897a56b2e1c96ba9a0ec3bb55207b"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "low_vram_variant",
+        "text_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - T2V Basic.json",
+      "sha256": "baadfdb01afa3e4b92f16e942f8152daaf3cd0fd3e442534cb1bc2080d37b5f3",
+      "size_bytes": 77489,
+      "workflow_format_version": 0.4,
+      "node_count": 68,
+      "link_count": 59,
+      "group_count": 7,
+      "groups": [
+        "Sampler - Second Pass Upscale",
+        "Decode",
+        "Group",
+        "Prompt",
+        "Prepare LTX Latent",
+        "Sampler - First Pass",
+        "Video Settings"
+      ],
+      "node_types": {
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "EmptyImage": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 16,
+        "INTConstant": 3,
+        "KSamplerSelect": 2,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVLatentUpsampler": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoraLoaderModelOnly": 1,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "PathchSageAttentionKJ": 1,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 11,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 186,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        },
+        {
+          "node_id": 192,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 193,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 188,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 213,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 215,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 216,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 223,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 226,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 227,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 238,
+          "title": "Set_latent",
+          "semantic_key": "latent"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 251,
+          "title": "About  Models",
+          "char_count": 69,
+          "text_sha256": "f1dd4510d0b42ab745fc6d9cd3f34a6748f49f3a5fc7c4fd715e855527d250eb"
+        },
+        {
+          "node_id": 250,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 253,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "text_to_video",
+        "two_stage_upscale"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - T2V Talking Avatar (voice clone Qwen-TTS).json",
+      "sha256": "faee6f2552c5e619c98264132ff6c2505e9c9f08f04ab3d9ec910c07f7e464c1",
+      "size_bytes": 107351,
+      "workflow_format_version": 0.4,
+      "node_count": 97,
+      "link_count": 84,
+      "group_count": 11,
+      "groups": [
+        "Sampler - Second Pass Upscale",
+        "Decode",
+        "Prompt",
+        "Prepare LTX Latent",
+        "Sampler - First Pass",
+        "Voice Clone",
+        "Vocal stem only (optional)",
+        "LTX latent audio",
+        "Audio duration to video length (frames)",
+        "Video Settings",
+        "Group"
+      ],
+      "node_types": {
+        "AILab_Qwen3TTSVoiceClone": 1,
+        "Audio Duration (mtb)": 1,
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "DualCLIPLoaderGGUF": 1,
+        "EmptyImage": 1,
+        "EmptyLTXVLatentVideo": 1,
+        "GetImageSize": 1,
+        "GetNode": 24,
+        "INTConstant": 2,
+        "KSamplerSelect": 2,
+        "LTX2AudioLatentNormalizingSampling": 1,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVAudioVAEEncode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVLatentUpsampler": 1,
+        "LTXVScheduler": 1,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoadAudio": 1,
+        "LoraLoaderModelOnly": 2,
+        "ManualSigmas": 1,
+        "MarkdownNote": 4,
+        "MelBandRoFormerModelLoader": 1,
+        "MelBandRoFormerSampler": 1,
+        "PreviewAudio": 1,
+        "PrimitiveFloat": 1,
+        "PrimitiveStringMultiline": 2,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetLatentNoiseMask": 1,
+        "SetNode": 13,
+        "SimpleCalculatorKJ": 2,
+        "SolidMask": 1,
+        "TrimAudioDuration": 1,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_VideoCombine": 1,
+        "VRAM_Debug": 1,
+        "easy showAnything": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "ComfyUI-MelBandRoFormer": [
+          "260cb03c4da37aaf20ef3ab5ad5805e1e0eafd38"
+        ],
+        "ComfyUI-QwenTTS": [
+          "8538f201fd412bf37d8354ba11815f4d1687b855"
+        ],
+        "comfy-mtb": [
+          "00fbad37c52ec71c7923b50e019eec29c441ae12"
+        ],
+        "comfyui-easy-use": [
+          "b5e31ef12ad9d0b187b545c2707735cc7d581c52"
+        ],
+        "comfyui-kjnodes": [
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "71578cf49e48978cf1c6714494b669b1e571777b",
+          "c6ce76d00bb8177d1b0286cad891df08eff5226e",
+          "f91daf93293ab7fb28836159595a5b088c86313a"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX/v2/ltx-2-19b-lora-camera-control-static.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "MelBandRoformer/MelBandRoformer_fp16.safetensors",
+        "gemma3-12b-it-q2_k.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_dev_bf16.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 226,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 227,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 238,
+          "title": "Set_latent",
+          "semantic_key": "latent"
+        },
+        {
+          "node_id": 264,
+          "title": "Set_latent_custom_audio",
+          "semantic_key": "latent_custom_audio"
+        },
+        {
+          "node_id": 281,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 282,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 283,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 287,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 288,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 290,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 291,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 301,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 267,
+          "title": "Set_frames",
+          "semantic_key": "frames"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 250,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 253,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        },
+        {
+          "node_id": 277,
+          "title": "Prompting LTX-2",
+          "char_count": 111,
+          "text_sha256": "95a1aeaa5742a585af96da8d74876ddc8375653ecbebad435682f89ec8486d98"
+        },
+        {
+          "node_id": 251,
+          "title": "About  Models",
+          "char_count": 162,
+          "text_sha256": "dfe29ba4ad0f874e4b205fcf8570e333203ee018e434e3fcc08cff58689fc025"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "talking_avatar",
+        "text_to_video",
+        "two_stage_upscale",
+        "voice_clone"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - V2A Foley (add sound to any video).json",
+      "sha256": "dfbb23b12e8c44ac5698dc82c2d1a611d1cef67d0de4a1e8b7822e53bdf8c8b7",
+      "size_bytes": 99155,
+      "workflow_format_version": 0.4,
+      "node_count": 85,
+      "link_count": 76,
+      "group_count": 8,
+      "groups": [
+        "Load Video",
+        "Models",
+        "SETTINGS",
+        "LTX Latent",
+        "Prompt",
+        "Sampler",
+        "Detailer",
+        "SETTINGS REFINE / UPSCALE"
+      ],
+      "node_types": {
+        "BasicScheduler": 1,
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "DualCLIPLoaderGGUF": 1,
+        "Fast Groups Bypasser (rgthree)": 1,
+        "GetImageSizeAndCount": 1,
+        "GetNode": 20,
+        "INTConstant": 4,
+        "ImageResizeKJv2": 2,
+        "KSamplerSelect": 2,
+        "LTX2AudioLatentNormalizingSampling": 1,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 1,
+        "LTXVConditioning": 2,
+        "LTXVEmptyLatentAudio": 1,
+        "LTXVLoopingSampler": 1,
+        "LTXVSeparateAVLatent": 1,
+        "LatentUpscaleModelLoader": 1,
+        "LoraLoaderModelOnly": 3,
+        "ManualSigmas": 1,
+        "MarkdownNote": 5,
+        "RandomNoise": 2,
+        "SamplerCustomAdvanced": 1,
+        "SetNode": 13,
+        "SimpleCalculatorKJ": 1,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAEEncodeTiled": 2,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_LoadVideo": 1,
+        "VHS_VideoCombine": 2,
+        "VHS_VideoInfo": 1,
+        "VRAM_Debug": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "ComfyUI-LTXVideo": [
+          "6790484426305443104ea47d7a2aab13badd8c49"
+        ],
+        "comfyui-kjnodes": [
+          "32c209572c512e584e18e3a16d5680aafd5fabab",
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "93a4fba44c1635a716dc262f157a7ded7d716f3a"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2",
+          "993082e4f2473bf4acaf06f51e33877a7eb38960"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX/v2/ltx-2-19b-ic-lora-detailer.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-dev-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "gemma3-12b-it-q2_k.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_dev_bf16.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 184,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 185,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 187,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 189,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 201,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 202,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 231,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 253,
+          "title": "Set_audio_ltx",
+          "semantic_key": "audio_ltx"
+        },
+        {
+          "node_id": 257,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 258,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 220,
+          "title": "Set_source_video",
+          "semantic_key": "source_video"
+        },
+        {
+          "node_id": 268,
+          "title": "Set_model_dev",
+          "semantic_key": "model_dev"
+        },
+        {
+          "node_id": 190,
+          "title": "Set_model",
+          "semantic_key": "model"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 199,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 200,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        },
+        {
+          "node_id": 198,
+          "title": "About  Models",
+          "char_count": 69,
+          "text_sha256": "f1dd4510d0b42ab745fc6d9cd3f34a6748f49f3a5fc7c4fd715e855527d250eb"
+        },
+        {
+          "node_id": 285,
+          "title": "About width and height",
+          "char_count": 182,
+          "text_sha256": "8dd4d059eeb03adb89fbde4e55c7a808565e4f513a7c35077ebcde324160e778"
+        },
+        {
+          "node_id": 229,
+          "title": "About width and height",
+          "char_count": 186,
+          "text_sha256": "50b1bdcbfd42a4d8e6a7697511d6b55ae676d4abd066e7de4510ae4ea7d0d7c8"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "foley",
+        "looping_sampler",
+        "two_stage_upscale",
+        "video_to_audio"
+      ]
+    },
+    {
+      "source_file": "LTX-2-Workflows-upstream/LTX-2 - V2V (extend any video).json",
+      "sha256": "a996634d404524796db5f145c7b802b6f73504adabc5838ce6e12c05aeb12ec6",
+      "size_bytes": 102050,
+      "workflow_format_version": 0.4,
+      "node_count": 91,
+      "link_count": 86,
+      "group_count": 8,
+      "groups": [
+        "Ref Video",
+        "Models",
+        "SETTINGS",
+        "Prompt",
+        "LTX Latent",
+        "Sampler 1st pass",
+        "Decode",
+        "Sampler - Second Pass Upscale"
+      ],
+      "node_types": {
+        "BasicScheduler": 1,
+        "CFGGuider": 2,
+        "CLIPTextEncode": 2,
+        "DualCLIPLoader": 1,
+        "GetImageRangeFromBatch": 1,
+        "GetNode": 24,
+        "INTConstant": 3,
+        "ImageResizeKJv2": 2,
+        "KSamplerSelect": 2,
+        "LTX2AudioLatentNormalizingSampling": 1,
+        "LTXVAudioVAEDecode": 1,
+        "LTXVAudioVAEEncode": 1,
+        "LTXVAudioVideoMask": 1,
+        "LTXVChunkFeedForward": 1,
+        "LTXVConcatAVLatent": 2,
+        "LTXVConditioning": 1,
+        "LTXVImgToVideoInplace": 1,
+        "LTXVLatentUpsampler": 1,
+        "LTXVPreprocess": 2,
+        "LTXVSeparateAVLatent": 2,
+        "LatentUpscaleModelLoader": 1,
+        "LoraLoaderModelOnly": 1,
+        "ManualSigmas": 1,
+        "MarkdownNote": 3,
+        "PathchSageAttentionKJ": 1,
+        "PrimitiveFloat": 1,
+        "RandomNoise": 2,
+        "ResizeImageMaskNode": 1,
+        "ResizeImagesByLongerEdge": 1,
+        "SamplerCustomAdvanced": 2,
+        "SetNode": 14,
+        "SimpleCalculatorKJ": 2,
+        "UNETLoader": 1,
+        "UnetLoaderGGUF": 1,
+        "VAEDecodeTiled": 1,
+        "VAEEncodeTiled": 1,
+        "VAELoader": 1,
+        "VAELoaderKJ": 1,
+        "VHS_LoadVideo": 1,
+        "VHS_VideoCombine": 1,
+        "VHS_VideoInfo": 1
+      },
+      "custom_node_packages": {
+        "ComfyUI-GGUF": [
+          "6ea2651e7df66d7585f6ffee804b20e92fb38b8a"
+        ],
+        "comfyui-kjnodes": [
+          "02657c3ae1a140bc4d6b6225845a4474b8632ef9",
+          "487c7d86a0230aae3d8c0a37d517159b73834f85",
+          "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+          "4dfb85dcc52e4315c33170d97bb987baa46d128b",
+          "93a4fba44c1635a716dc262f157a7ded7d716f3a",
+          "98618295c32d41a796754915a1ba1b12ee15eba3",
+          "c8e7f48a7f68b7a31ee336bc0be54bedbca05ffa"
+        ],
+        "comfyui-videohelpersuite": [
+          "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2",
+          "993082e4f2473bf4acaf06f51e33877a7eb38960"
+        ]
+      },
+      "models_observed": [
+        "LTX/v2/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors",
+        "LTX2_audio_vae_bf16_KJ.safetensors",
+        "LTX2_video_vae_bf16_KJ.safetensors",
+        "LTXVideo/v2/ltx-2-19b-distilled-fp8_transformer_only.safetensors",
+        "LTXvideo/LTX-2/ltx-2-19b-dev_Q8_0.gguf",
+        "gemma_3_12B_it_fp8_scaled.safetensors",
+        "ltx-2-19b-embeddings_connector_distill_bf16.safetensors",
+        "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+      ],
+      "semantic_anchors": [
+        {
+          "node_id": 191,
+          "title": "Set_upscale_model",
+          "semantic_key": "upscale_model"
+        },
+        {
+          "node_id": 192,
+          "title": "Set_clip",
+          "semantic_key": "clip"
+        },
+        {
+          "node_id": 194,
+          "title": "Set_vae",
+          "semantic_key": "vae"
+        },
+        {
+          "node_id": 196,
+          "title": "Set_vae_audio",
+          "semantic_key": "vae_audio"
+        },
+        {
+          "node_id": 197,
+          "title": "Set_model",
+          "semantic_key": "model"
+        },
+        {
+          "node_id": 207,
+          "title": "Set_width",
+          "semantic_key": "width"
+        },
+        {
+          "node_id": 208,
+          "title": "Set_height",
+          "semantic_key": "height"
+        },
+        {
+          "node_id": 210,
+          "title": "Set_fps",
+          "semantic_key": "fps"
+        },
+        {
+          "node_id": 224,
+          "title": "Set_positive",
+          "semantic_key": "positive"
+        },
+        {
+          "node_id": 225,
+          "title": "Set_negative",
+          "semantic_key": "negative"
+        },
+        {
+          "node_id": 209,
+          "title": "Set_ext_seconds",
+          "semantic_key": "ext_seconds"
+        },
+        {
+          "node_id": 297,
+          "title": "Set_resize_image",
+          "semantic_key": "resize_image"
+        },
+        {
+          "node_id": 285,
+          "title": "Set_compress_image",
+          "semantic_key": "compress_image"
+        },
+        {
+          "node_id": 294,
+          "title": "Set_ref_image",
+          "semantic_key": "ref_image"
+        }
+      ],
+      "notes": [
+        {
+          "node_id": 203,
+          "title": "About  Models",
+          "char_count": 69,
+          "text_sha256": "f1dd4510d0b42ab745fc6d9cd3f34a6748f49f3a5fc7c4fd715e855527d250eb"
+        },
+        {
+          "node_id": 190,
+          "title": "About Size",
+          "char_count": 318,
+          "text_sha256": "001ebd039a628c232adcd9d39d2c07fb48b1eafc6365d8f13c53038e13b57871"
+        },
+        {
+          "node_id": 205,
+          "title": "Prompting LTX-2",
+          "char_count": 335,
+          "text_sha256": "34d82383ea15061f8d9f8a01a5c71fa7ba1e89d3716c8bcdef94d63fbb3e3c75"
+        }
+      ],
+      "capabilities": [
+        "audio_latent_pipeline",
+        "two_stage_upscale",
+        "video_extension",
+        "video_to_video"
+      ]
+    }
+  ],
+  "aggregate": {
+    "node_types": {
+      "AILab_Qwen3TTSVoiceClone": 2,
+      "Any Switch (rgthree)": 2,
+      "Audio Duration (mtb)": 2,
+      "BasicScheduler": 3,
+      "CFGGuider": 37,
+      "CLIPTextEncode": 38,
+      "CM_FloatToInt": 2,
+      "CannyEdgePreprocessor": 1,
+      "ComfySwitchNode": 6,
+      "DWPreprocessor": 2,
+      "DepthAnythingV2Preprocessor": 1,
+      "DualCLIPLoader": 19,
+      "DualCLIPLoaderGGUF": 9,
+      "EmptyImage": 5,
+      "EmptyLTXVLatentVideo": 17,
+      "Fast Groups Bypasser (rgthree)": 7,
+      "GetImageRangeFromBatch": 1,
+      "GetImageSize": 16,
+      "GetImageSizeAndCount": 1,
+      "GetNode": 478,
+      "INTConstant": 58,
+      "ImageConcatMulti": 10,
+      "ImageResizeKJv2": 20,
+      "ImageScaleBy": 14,
+      "KSamplerSelect": 37,
+      "LTX2AttentionTunerPatch": 1,
+      "LTX2AudioLatentNormalizingSampling": 5,
+      "LTX2MemoryEfficientSageAttentionPatch": 1,
+      "LTX2SamplingPreviewOverride": 2,
+      "LTX2_NAG": 2,
+      "LTXVAddGuide": 2,
+      "LTXVAddGuideMulti": 2,
+      "LTXVAudioVAEDecode": 19,
+      "LTXVAudioVAEEncode": 5,
+      "LTXVAudioVideoMask": 1,
+      "LTXVChunkFeedForward": 17,
+      "LTXVConcatAVLatent": 36,
+      "LTXVConditioning": 20,
+      "LTXVCropGuides": 6,
+      "LTXVEmptyLatentAudio": 18,
+      "LTXVImgToVideoInplace": 21,
+      "LTXVImgToVideoInplaceKJ": 1,
+      "LTXVLatentUpsampler": 17,
+      "LTXVLoopingSampler": 1,
+      "LTXVPreprocess": 18,
+      "LTXVScheduler": 16,
+      "LTXVSeparateAVLatent": 36,
+      "LatentUpscaleModelLoader": 18,
+      "LoadAudio": 4,
+      "LoadImage": 16,
+      "LoraLoaderModelOnly": 29,
+      "ManualSigmas": 18,
+      "MarkdownNote": 57,
+      "MelBandRoFormerModelLoader": 4,
+      "MelBandRoFormerSampler": 4,
+      "Note": 2,
+      "PathchSageAttentionKJ": 12,
+      "Power Lora Loader (rgthree)": 3,
+      "PreviewAudio": 2,
+      "PrimitiveBoolean": 2,
+      "PrimitiveFloat": 11,
+      "PrimitiveStringMultiline": 4,
+      "RandomNoise": 37,
+      "Reroute": 2,
+      "ResizeImageMaskNode": 21,
+      "ResizeImagesByLongerEdge": 14,
+      "SamplerCustomAdvanced": 36,
+      "SetLatentNoiseMask": 4,
+      "SetNode": 294,
+      "SimpleCalculatorKJ": 16,
+      "SimpleMath+": 2,
+      "SolidMask": 4,
+      "TrimAudioDuration": 4,
+      "UNETLoader": 18,
+      "UnetLoaderGGUF": 19,
+      "VAEDecodeTiled": 19,
+      "VAEEncodeTiled": 3,
+      "VAELoader": 20,
+      "VAELoaderKJ": 19,
+      "VHS_LoadVideo": 6,
+      "VHS_VideoCombine": 29,
+      "VHS_VideoInfo": 2,
+      "VRAM_Debug": 5,
+      "easy showAnything": 2
+    },
+    "custom_node_packages": {
+      "ComfyUI-GGUF": [
+        "6ea2651e7df66d7585f6ffee804b20e92fb38b8a",
+        "f083506720f2f049631ed6b6e937440f5579f6c7"
+      ],
+      "ComfyUI-LTXVideo": [
+        "6790484426305443104ea47d7a2aab13badd8c49"
+      ],
+      "ComfyUI-MelBandRoFormer": [
+        "260cb03c4da37aaf20ef3ab5ad5805e1e0eafd38",
+        "b40e263224778ec417114d91d8b3b39934e30de5"
+      ],
+      "ComfyUI-QwenTTS": [
+        "8538f201fd412bf37d8354ba11815f4d1687b855"
+      ],
+      "comfy-mtb": [
+        "00fbad37c52ec71c7923b50e019eec29c441ae12"
+      ],
+      "comfymath": [
+        "c01177221c31b8e5fbc062778fc8254aeb541638"
+      ],
+      "comfyui-easy-use": [
+        "b5e31ef12ad9d0b187b545c2707735cc7d581c52"
+      ],
+      "comfyui-kjnodes": [
+        "02657c3ae1a140bc4d6b6225845a4474b8632ef9",
+        "17282f9cff7c4f7d3c50fcea5061fad4d87d6aea",
+        "17cddd4959f00182c66954be2a7a32a6481d81be",
+        "204f6d5aae73b10c0fe2fb26e61405fd6337bb77",
+        "32c209572c512e584e18e3a16d5680aafd5fabab",
+        "37bda1000e75e5649c224b0b4a8a6f57093ef925",
+        "3e3a1a8aac61dc4515f6a7da74e026f05a80299f",
+        "42bdf92f9ab7e3d78381c022eaa3b4341c528d72",
+        "487c7d86a0230aae3d8c0a37d517159b73834f85",
+        "4cb4ede5c3a4cebc14bb63b49b62f03cd16d44a5",
+        "4dfb85dcc52e4315c33170d97bb987baa46d128b",
+        "71578cf49e48978cf1c6714494b669b1e571777b",
+        "93a4fba44c1635a716dc262f157a7ded7d716f3a",
+        "98618295c32d41a796754915a1ba1b12ee15eba3",
+        "bb1d9d5d2259497a1d26e051f32af866043de77a",
+        "c6ce76d00bb8177d1b0286cad891df08eff5226e",
+        "c8e7f48a7f68b7a31ee336bc0be54bedbca05ffa",
+        "f91daf93293ab7fb28836159595a5b088c86313a",
+        "ff7f876c09ff5a53be051073c3c1731b96ee31a3"
+      ],
+      "comfyui-videohelpersuite": [
+        "0a75c7958fe320efcb052f1d9f8451fd20c730a8",
+        "1.7.7",
+        "3234937ff5f3ca19068aaba5042771514de2429d",
+        "4f804bb23f3292609b6b42527cb1f015e52ef83e",
+        "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2",
+        "993082e4f2473bf4acaf06f51e33877a7eb38960"
+      ],
+      "comfyui_controlnet_aux": [
+        "136f125c89aed92ced1b6fbb491e13719b72fcc0"
+      ],
+      "comfyui_essentials": [
+        "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9"
+      ],
+      "rgthree-comfy": [
+        "8ff50e4521881eca1fe26aec9615fc9362474931"
+      ]
+    }
+  },
+  "limits": [
+    "This is static UI-workflow inspection, not runtime execution proof.",
+    "Repository examples are evidence of author workflow patterns, not universal LTX-2 requirements.",
+    "Production execution still requires an API-format export plus target /object_info preflight."
+  ]
+}

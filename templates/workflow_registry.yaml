@@ -1,0 +1,95 @@
+workflow_registry:
+  - profile_id: wan_user_i2v_primary
+    source:
+      kind: user_verified_workflow
+      ui_template_ref: null
+      source_url: null
+      workflow_json_version: null
+    runtime:
+      comfyui_version_tested: null
+      template_package_version: null
+    workflow_api_json_ref: null
+    dependency_manifest_ref: null
+    binding_ref: null
+    verification:
+      status: DISCOVERED
+      run_verified: false
+      api_exported: false
+      binding_verified: false
+      regression_pass: false
+    model_family: wan
+    execution_kind: local_open_weight
+    capabilities: [image_to_video]
+    notes: "Register the user's actually-tested workflow here."
+
+  - profile_id: wan_user_first_last
+    source:
+      kind: user_verified_workflow
+      ui_template_ref: null
+      source_url: null
+      workflow_json_version: null
+    runtime:
+      comfyui_version_tested: null
+      template_package_version: null
+    workflow_api_json_ref: null
+    dependency_manifest_ref: null
+    binding_ref: null
+    verification:
+      status: DISCOVERED
+      run_verified: false
+      api_exported: false
+      binding_verified: false
+      regression_pass: false
+    model_family: wan
+    execution_kind: local_open_weight
+    capabilities: [image_to_video, first_last_frame]
+
+  - profile_id: ltx2_user_primary
+    source:
+      kind: user_verified_workflow
+      ui_template_ref: null
+      source_url: null
+      workflow_json_version: null
+    runtime:
+      comfyui_version_tested: null
+      model_version_tested: null
+    workflow_api_json_ref: null
+    dependency_manifest_ref: null
+    binding_ref: null
+    verification:
+      status: DISCOVERED
+      run_verified: false
+      api_exported: false
+      binding_verified: false
+      regression_pass: false
+    model_family: ltx2
+    execution_kind: local_open_weight
+    capabilities: []
+    notes: "Production LTX-2 profile must come from the user's actually working graph."
+
+reference_case_registries:
+  - registry_id: appvikalabs_ltx2_workflows
+    model_family: ltx2
+    source_kind: community_reference_case
+    source_url: https://github.com/appvikalabs/LTX-2-Workflows
+    catalog_ref: ../video_engine/ltx2/catalog/appvikalabs_workflow_catalog.json
+    verification_status: STATIC_STUDY_ONLY
+    production_ready: false
+    use_for:
+      - capability_selection
+      - graph_pattern_learning
+      - dependency_recognition
+      - semantic_anchor_discovery
+    do_not_use_for:
+      - direct_prompt_submission
+      - runtime_compatibility_claim
+      - automatic_model_swap
+
+selection_policy:
+  production_min_status: REGRESSION_PASS
+  allow_candidate_for_planning: true
+  allow_community_reference_for_planning: true
+  community_reference_never_equals_production_profile: true
+  do_not_invent_missing_profile: true
+  prefer_user_run_verified_over_unverified_official: true
+  prefer_current_official_over_legacy_community_when_no_user_profile: true

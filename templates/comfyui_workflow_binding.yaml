@@ -1,0 +1,109 @@
+comfyui_workflow_binding:
+  profile_id: null
+  binding_target_format: api
+  derived_from:
+    ui_template_ref: null
+    ui_template_source_url: null
+    api_export_ref: null
+    semantic_anchor_report_ref: null
+  verification:
+    status: DISCOVERED
+    verified_working: false
+    comfyui_version_tested: null
+    template_package_version: null
+    object_info_snapshot_ref: null
+    api_graph_structure_sha256: null
+    regression_run_ref: null
+  model_family: null
+
+  capabilities:
+    image_to_video: false
+    text_to_video: false
+    video_to_video: false
+    video_to_audio: false
+    first_last_frame: false
+    first_middle_last_frame: false
+    camera_control: false
+    pose_or_control_video: false
+    pose_control: false
+    canny_control: false
+    depth_control: false
+    identity_reference: false
+    audio_conditioning: false
+    custom_audio: false
+    voice_clone: false
+    foley: false
+    two_stage_upscale: false
+    gguf: false
+    low_vram_variant: false
+
+  frame_constraints:
+    policy_source: workflow_specific
+    length_step: null
+    length_base: null
+    min_length: null
+    max_length: null
+    width_step: null
+    height_step: null
+    notes: null
+
+  asset_bindings:
+    source_image: {upload_required: true, upload_type: input, subfolder: skill_inputs, semantic_key: source_image}
+    middle_image: {upload_required: true, upload_type: input, subfolder: skill_inputs, semantic_key: middle_image}
+    end_image: {upload_required: true, upload_type: input, subfolder: skill_inputs, semantic_key: end_image}
+    source_video: {upload_required: true, upload_type: input, subfolder: skill_inputs, semantic_key: source_video}
+    pose_control: {upload_required: true, upload_type: input, subfolder: skill_inputs, semantic_key: pose_control}
+    canny_control: {upload_required: true, upload_type: input, subfolder: skill_inputs, semantic_key: canny_control}
+    depth_control: {upload_required: true, upload_type: input, subfolder: skill_inputs, semantic_key: depth_control}
+    custom_audio: {upload_required: true, upload_type: input, subfolder: skill_inputs, semantic_key: custom_audio}
+    reference_audio: {upload_required: true, upload_type: input, subfolder: skill_inputs, semantic_key: reference_audio}
+
+  mutable_allowlist:
+    - positive_prompt
+    - negative_prompt
+    - source_image
+    - middle_image
+    - end_image
+    - source_video
+    - pose_control
+    - canny_control
+    - depth_control
+    - custom_audio
+    - reference_audio
+    - width
+    - height
+    - frame_length
+    - duration_seconds
+    - extension_seconds
+    - fps
+    - seed
+    - steps
+    - cfg
+    - text_only_mode
+    - camera_pose
+    - camera_speed
+
+  bindings:
+    positive_prompt: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    negative_prompt: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    source_image: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    middle_image: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    end_image: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    source_video: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    pose_control: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    canny_control: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    depth_control: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    custom_audio: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    reference_audio: {node_id: null, expected_class_type: null, input: null, value_type: string}
+    width: {node_id: null, expected_class_type: null, input: null, value_type: int, min: null, max: null, step: null, base: null}
+    height: {node_id: null, expected_class_type: null, input: null, value_type: int, min: null, max: null, step: null, base: null}
+    frame_length: {node_id: null, expected_class_type: null, input: null, value_type: int, min: null, max: null, step: null, base: null}
+    duration_seconds: {node_id: null, expected_class_type: null, input: null, value_type: float, min: 0.01, max: null}
+    extension_seconds: {node_id: null, expected_class_type: null, input: null, value_type: float, min: 0.01, max: null}
+    fps: {node_id: null, expected_class_type: null, input: null, value_type: float, min: 1, max: null}
+    seed: {node_id: null, expected_class_type: null, input: null, value_type: int, min: 0, max: null}
+    steps: {node_id: null, expected_class_type: null, input: null, value_type: int, min: 1, max: null}
+    cfg: {node_id: null, expected_class_type: null, input: null, value_type: float, min: 0, max: null}
+    text_only_mode: {node_id: null, expected_class_type: null, input: null, value_type: bool}
+    camera_pose: {node_id: null, expected_class_type: null, input: null}
+    camera_speed: {node_id: null, expected_class_type: null, input: null}

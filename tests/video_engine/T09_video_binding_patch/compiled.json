@@ -1,0 +1,58 @@
+{
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "38",
+        0
+      ],
+      "text": "cinematic approved still, subtle breathing, controlled head turn"
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "38",
+        0
+      ],
+      "text": "identity drift, temporal warping, malformed hands"
+    }
+  },
+  "55": {
+    "class_type": "Wan22ImageToVideoLatent",
+    "inputs": {
+      "vae": [
+        "39",
+        0
+      ],
+      "width": 1280,
+      "height": 704,
+      "length": 121,
+      "batch_size": 1,
+      "start_image": [
+        "57",
+        0
+      ]
+    }
+  },
+  "57": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shot_03_approved.png"
+    }
+  },
+  "47": {
+    "class_type": "SaveWEBM",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "ComfyUI",
+      "codec": "vp9",
+      "fps": 24.0,
+      "crf": 32.0
+    }
+  }
+}

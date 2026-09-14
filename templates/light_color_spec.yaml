@@ -1,0 +1,53 @@
+light_color_spec:
+  project_id: null
+  style_ref: null
+  sources:
+    - id: L1
+      type: null
+      direction: null
+      relative_intensity: null
+      hardness: null
+      color_family: null
+      coverage: null
+      visible_source: null
+      narrative_role: primary
+  form_logic:
+    light_family: null
+    shadow_family: null
+    reflected_light_policy: null
+    occlusion_shadow: selective
+    stylization_mode: null
+  color_architecture:
+    dominant_gamut: []
+    supporting_colors: []
+    neutrals: []
+    accent_colors: []
+    forbidden_random_colors: []
+    value_range: null
+    chroma_range: null
+    warm_cool_relationship: null
+  materials:
+    - entity_or_surface: null
+      response_model: diffuse
+      reflection_context: null
+      transmission_notes: null
+      highlight_behavior: null
+  atmosphere:
+    type: none
+    density: null
+    depth_effect: null
+    color_shift: null
+    contrast_shift: null
+    volumetric_light: null
+  color_script:
+    enabled: false
+    units:
+      - id: S01
+        dominant_gamut: []
+        value_range: null
+        chroma_range: null
+        warm_cool_bias: null
+        accent: null
+        atmosphere: null
+        emotional_function: null
+        transition_from_previous: null

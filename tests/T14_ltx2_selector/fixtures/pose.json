@@ -1,0 +1,7 @@
+{
+  "mode": "image_to_video",
+  "controls": [
+    "pose"
+  ],
+  "upscale": "prefer"
+}

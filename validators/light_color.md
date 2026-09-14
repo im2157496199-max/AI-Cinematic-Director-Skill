@@ -1,0 +1,17 @@
+# Light / Color / Perception Validator
+- [ ] Primary and secondary light sources are identifiable.
+- [ ] Light direction, shadow direction, hardness and color are coherent.
+- [ ] Bounce/reflected light does not arbitrarily erase form separation.
+- [ ] Contact/occlusion darks appear only where forms actually crowd out light.
+- [ ] Palette uses a deliberate gamut rather than arbitrary generator colors.
+- [ ] Accent color stays selective.
+- [ ] Warm/cool relations are contextual, not fixed symbolism.
+- [ ] Mixed colored lights behave coherently for the chosen stylization level.
+- [ ] Material response matches diffuse/glossy/reflective/translucent/subsurface/emissive identity.
+- [ ] Reflective surfaces reflect compatible surroundings.
+- [ ] Atmospheric depth changes contrast/color/edge clarity coherently.
+- [ ] Saturation is not maxed everywhere unless the chosen style explicitly demands it.
+- [ ] Sequential work checks color script across adjacent panels/shots/scenes.
+- [ ] Palette shifts have a narrative/location/time/emotional reason.
+- [ ] Book examples are not copied as the project art style.
+- [ ] Youth/anime/game taste comes from project references or case library.

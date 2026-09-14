@@ -1,0 +1,12 @@
+video_sequence_plan:
+  sequence_id: null
+  source_sequence_spec_ref: null
+  workflow_registry_ref: null
+  shots:
+    - shot_id: S01
+      shot_spec_ref: null
+      approved_still_ref: null
+      video_shot_plan_ref: null
+      generated_clip_ref: null
+      qa_status: pending
+  edit_sequence_spec_ref: null

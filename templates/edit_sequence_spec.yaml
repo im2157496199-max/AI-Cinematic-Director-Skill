@@ -1,0 +1,62 @@
+edit_sequence_spec:
+  project_id: null
+  sequence_id: null
+  source_shots: []
+
+  intent:
+    target_emotion: null
+    story_function: null
+    rhythm_profile: null
+    audience_current_knowledge: null
+
+  shots:
+    - shot_id: S01
+      purpose: null
+      representative_frame: null
+      generated_video_ref: null
+      actual_duration_s: null
+      fps: null
+      frame_count: null
+      candidate_in_points: []
+      candidate_out_points: []
+      chosen_in: null
+      chosen_out: null
+      duration: null
+      audience_current_thought: null
+      thought_completion: null
+      emotional_completion: null
+      next_needed_information: null
+      next_attention_target: null
+      redundancy_risk: null
+      keep_status: keep
+
+  cut_checks:
+    - from: S01
+      to: S02
+      emotion: null
+      story: null
+      rhythm: null
+      eye_trace: null
+      planarity: null
+      spatial_continuity: null
+      accepted_tradeoff: null
+
+  feedback_diagnosis:
+    complaints: []
+    possible_upstream_causes: []
+    tested_changes: []
+
+  versions:
+    - id: A
+      hypothesis: null
+      shot_order: []
+      result: null
+
+  sound_handoff:
+    cut_points: []
+    reveal_points: []
+    action_peaks: []
+    silence_windows: []
+    emotional_turns: []
+
+music_design_spec_ref: "templates/music_design_spec.yaml"

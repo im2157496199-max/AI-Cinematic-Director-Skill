@@ -1,0 +1,5 @@
+{
+  "mode": "image_to_video",
+  "audio_mode": "voice_clone",
+  "upscale": "prefer"
+}

@@ -1,0 +1,19 @@
+template_dependency_manifest:
+  template_profile_id: null
+  assets:
+    images: []
+    videos: []
+    audio: []
+    other: []
+  models: []
+  custom_nodes: []
+  python_dependencies: []
+  runtime:
+    comfyui_version: null
+    frontend_version: null
+    template_package_version: null
+    python_version: null
+  warnings: []
+  evidence:
+    source_template_ref: null
+    user_run_report_ref: null

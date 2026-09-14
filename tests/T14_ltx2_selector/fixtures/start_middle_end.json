@@ -1,0 +1,5 @@
+{
+  "mode": "image_to_video",
+  "keyframes": "start_middle_end",
+  "upscale": "prefer"
+}

@@ -1,0 +1,53 @@
+space_design_spec:
+  project_id: null
+  spatial_intent: []
+  style_ref: null
+
+  organization:
+    primary: null
+    dominant_space: null
+    secondary_spaces: []
+
+  relationships:
+    - a: null
+      b: null
+      type: adjacent
+      connector: null
+
+  enclosure:
+    strength: null
+    openings:
+      - id: O1
+        location: null
+        function: null
+        target: null
+
+  circulation:
+    approach: null
+    entry: null
+    main_path: []
+    secondary_paths: []
+    nodes: []
+    destination: null
+    reveal_sequence: []
+
+  scale:
+    mode: null
+    familiar_anchors: []
+    depth_layers: []
+    deliberate_scale_distortion: null
+
+  hierarchy:
+    primary_focus: null
+    secondary_accents: []
+    methods: []
+
+  rhythm:
+    repeated_family: null
+    cadence: null
+    controlled_break: null
+
+  handoff:
+    light_color_spec_ref: "templates/light_color_spec.yaml"
+    camera_opportunities: []
+    blocking_opportunities: []

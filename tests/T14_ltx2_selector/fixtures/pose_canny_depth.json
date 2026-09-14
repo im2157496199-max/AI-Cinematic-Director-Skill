@@ -1,0 +1,9 @@
+{
+  "mode": "image_to_video",
+  "controls": [
+    "pose",
+    "canny",
+    "depth"
+  ],
+  "upscale": "prefer"
+}

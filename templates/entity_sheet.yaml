@@ -1,0 +1,50 @@
+entity_sheet:
+  # Persistent identity registry for multi-shot generation.
+  # LOCKED descriptors are copied semantically unchanged into every shot where the entity appears.
+
+  characters:
+    - id: protagonist
+      locked_descriptor: ""
+      locked_features:
+        face: []
+        hair: []
+        body: []
+        species_or_identity_marks: []
+        costume: []
+        signature_props: []
+      recognition_cues:
+        silhouette: []
+        signature_shape_or_mark: []
+        instantly_readable_details: []
+      variable_states:
+        expression: null
+        pose: null
+        dirt_or_damage: null
+        temporary_props: []
+      reference_image: null
+      reference_roles: []   # identity | face | costume | pose | composition
+
+  locations:
+    - id: primary_location
+      locked_descriptor: ""
+      locked_features:
+        layout: []
+        architecture: []
+        fixed_props: []
+        materials: []
+      variable_states:
+        time_of_day: null
+        weather: null
+        damage: null
+        crowd_state: null
+      floor_plan_ref: null
+      reference_image: null
+
+  props: []
+
+  project_locks:
+    palette: null
+    art_style: null
+    rendering_style: null
+    aspect_ratio: null
+    character_rendering_consistency: null

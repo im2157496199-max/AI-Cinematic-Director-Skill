@@ -1,0 +1,73 @@
+music_design_spec:
+  project_id: null
+  sequence_id: null
+  case_library_refs: []
+
+  function:
+    narrative_function: null
+    target_emotion: null
+    character_or_location_association: []
+    audience_current_knowledge: null
+    diegetic_status: null
+    entry_reason: null
+    exit_reason: null
+
+  emotional_curve:
+    - time_or_event: null
+      state: null
+      valence: null
+      arousal: null
+      intensity: null
+
+  motifs:
+    - motif_id: M01
+      associated_entity: null
+      recognizable_core: null
+      current_meaning: null
+      transformations: []
+
+  states:
+    - state_id: null
+      purpose: null
+      tempo_band: null
+      rhythmic_density: null
+      harmonic_tension: null
+      timbre_instrumentation: []
+      layer_set: []
+
+  transitions:
+    - from: null
+      to: null
+      visual_event: null
+      method: null
+      anticipate_visual_by: null
+      accent_or_stinger: null
+
+  audio_relationship:
+    music_sound_design_mode: separated   # separated | mixed | unified
+    dialogue_windows: []
+    sfx_priority_windows: []
+    silence_windows: []
+
+  generation:
+    duration: null
+    tempo_band: null
+    key_or_mode: null
+    required_motifs: []
+    instrumentation: []
+    timbre_descriptors: []
+    energy_curve: []
+    cut_points: []
+    reveal_points: []
+    action_peaks: []
+    forbidden_cliches: []
+    model_specific_adapter: null
+
+  evaluation:
+    semantic_fit: null
+    emotional_fit: null
+    narrative_fit: null
+    temporal_boundary_fit: null
+    rhythmic_fit: null
+    dialogue_sfx_fit: null
+    continuity_fit: null

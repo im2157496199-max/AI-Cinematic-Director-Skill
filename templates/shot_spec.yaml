@@ -1,0 +1,85 @@
+shot_spec:
+  # multi-subject, performance-aware, sequence-aware.
+  id: ""
+  purpose: ""
+  scene_owner: null
+  dramatic_block_id: null
+  narrative_beat_id: null
+  fulcrum_relation: none   # none | build_to | fulcrum | aftermath
+
+  subjects:
+    - entity_id: ""
+      locked_identity_ref: null
+      role_in_shot: ""
+      objective: null
+      action_verb: null
+      action_target: null
+      subtext: null
+      physical_task: null
+      prop_interaction: []
+      visible_state: {}
+      gaze_target: null
+      body_orientation: null
+
+  relationships: []
+  environment:
+    location_id: null
+    visible_description: ""
+    variable_state: {}
+
+  staging:
+    blocking: null
+    proximity: null
+    depth_relations: []
+    movement_paths: []
+    floor_plan_ref: null
+
+  frame:
+    aspect_ratio: ""
+    shot_size: ""
+    attention: ""
+    composition: ""
+
+  camera:
+    narration_mode: objective   # objective | subjective | pov_approximation
+    placement: ""
+    lens_space_intent: null
+    movement: null
+    reveal_intent: null
+    required_information: []
+
+  focus: null
+  lighting: null
+  color_tone_texture: null
+
+  start_state: {}
+  end_state: {}
+  continuity_lock: null
+  references: null
+
+  constraints:
+    must: []
+    should: []
+    optional: []
+
+  adapter_target: generic
+
+  temporal:
+    target_duration_s: null
+    target_fps: null
+    subject_motion_intent: null
+    camera_motion_intent: null
+
+  i2v_handoff:
+    approved_still: false
+    source_image_ref: null
+    video_shot_plan_ref: null
+    workflow_profile_id: null
+
+
+# State Authority Rule
+
+# shot_spec.yaml is the authoritative source for start_state/end_state.
+# sequence_spec entries are derived cache views only.
+# If conflict occurs:
+# shot_spec wins.

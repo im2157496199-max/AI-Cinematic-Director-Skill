@@ -1,0 +1,19 @@
+{
+  "bindings": {
+    "positive_prompt": {
+      "node_id": "6",
+      "expected_class_type": "CLIPTextEncode",
+      "input": "text"
+    },
+    "negative_prompt": {
+      "node_id": "7",
+      "expected_class_type": "CLIPTextEncode",
+      "input": "text"
+    },
+    "seed": {
+      "node_id": "3",
+      "expected_class_type": "KSampler",
+      "input": "seed"
+    }
+  }
+}

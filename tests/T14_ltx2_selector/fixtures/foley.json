@@ -1,0 +1,5 @@
+{
+  "mode": "video_to_audio",
+  "audio_mode": "foley",
+  "upscale": "prefer"
+}

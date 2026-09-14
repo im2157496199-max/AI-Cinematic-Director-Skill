@@ -1,0 +1,27 @@
+{
+  "structure_sha256_before": "248422831a8196c84348cc2f66957fffc3c235249af5aed152900b192401760e",
+  "structure_sha256_after": "248422831a8196c84348cc2f66957fffc3c235249af5aed152900b192401760e",
+  "changes": [
+    {
+      "key": "positive_prompt",
+      "node_id": "6",
+      "input": "text",
+      "old": "old positive",
+      "new": "approved-shot prompt"
+    },
+    {
+      "key": "negative_prompt",
+      "node_id": "7",
+      "input": "text",
+      "old": "old negative",
+      "new": "artifact, drift"
+    },
+    {
+      "key": "seed",
+      "node_id": "3",
+      "input": "seed",
+      "old": 8566257,
+      "new": 5
+    }
+  ]
+}

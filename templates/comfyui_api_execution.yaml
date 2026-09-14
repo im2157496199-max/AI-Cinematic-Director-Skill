@@ -1,0 +1,29 @@
+comfyui_api_execution:
+  backend: self_hosted_server_api
+  base_url: http://127.0.0.1:8188
+  workflow_api_ref: null
+  workflow_binding_ref: null
+  object_info_snapshot_ref: null
+  asset_uploads:
+    source_image:
+      local_path: null
+      upload_type: input
+      subfolder: skill_inputs
+      returned_name: null
+      returned_subfolder: null
+      workflow_value: null
+  submission:
+    client_id: null
+    prompt_id: null
+    front: false
+    number: null
+    partial_execution_targets: null
+  monitor:
+    mode: websocket_history
+    timeout_seconds: 900
+  result:
+    status: NOT_RUN
+    prompt_id: null
+    queue_number: null
+    node_errors: {}
+    history_ref: null

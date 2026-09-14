@@ -1,0 +1,65 @@
+{
+  "id": "fixture-basic",
+  "revision": 0,
+  "last_node_id": 5,
+  "last_link_id": 4,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "inputs": [],
+      "outputs": [{"name":"MODEL","type":"MODEL","links":[1]}],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.60",
+        "models": [{
+          "name": "fixture_model.safetensors",
+          "url": "https://huggingface.co/example/fixture/resolve/main/fixture_model.safetensors",
+          "directory": "diffusion_models"
+        }]
+      },
+      "widgets_values": ["fixture_model.safetensors", "default"]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "inputs": [],
+      "outputs": [{"name":"IMAGE","type":"IMAGE","links":[2]}],
+      "properties": {"cnr_id":"comfy-core","ver":"0.3.60"},
+      "widgets_values": ["fixture_start.png", "image"]
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "inputs": [],
+      "outputs": [{"name":"CONDITIONING","type":"CONDITIONING","links":[3]}],
+      "properties": {"cnr_id":"comfy-core","ver":"0.3.60"},
+      "widgets_values": ["subject turns slowly"]
+    },
+    {
+      "id": 4,
+      "type": "WanImageToVideo",
+      "inputs": [
+        {"name":"start_image","type":"IMAGE","link":2},
+        {"name":"positive","type":"CONDITIONING","link":3}
+      ],
+      "outputs": [{"name":"latent","type":"LATENT","links":[4]}],
+      "properties": {"cnr_id":"comfy-core","ver":"0.3.60"},
+      "widgets_values": [512,512,33,1]
+    },
+    {
+      "id": 5,
+      "type": "SaveVideo",
+      "inputs": [{"name":"video","type":"VIDEO","link":null}],
+      "outputs": [],
+      "properties": {"cnr_id":"comfy-core","ver":"0.3.60"},
+      "widgets_values": ["video/test","auto","auto"]
+    }
+  ],
+  "links": [],
+  "groups": [],
+  "config": {},
+  "extra": {"frontendVersion":"1.49.6"},
+  "version": 0.4
+}

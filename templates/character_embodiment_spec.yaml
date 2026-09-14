@@ -1,0 +1,106 @@
+character_embodiment:
+  identity:
+    name: null
+    role: null
+    faction: null
+    visual_anchor_refs: []
+
+  personality:
+    base_trait: null
+    secondary_trait: null
+    contradiction: null
+    gap_trigger: null
+    gap_behavior: null
+
+  archetype_translation:
+    archetype: null
+    motive_energy: null
+    dominant_shape_family: null
+    proportion_note: null
+    signature_visual_semiotics: []
+    familiar_anchor: null
+    differentiating_twist: null
+
+  scene_intent:
+    current_objective: null
+    action_verb: null
+    relationship_target: null
+    viewer_relationship: null
+
+  current_state:
+    emotion: null
+    intensity: 0.5
+
+  face_behavior:
+    base_eye_shape: null
+    gaze_target: null
+    gaze_quality: null
+    eyebrow_tension: null
+    eyelid_openness: null
+    mouth_shape: null
+    expression_amplitude: null
+    head_angle: null
+
+  upper_body:
+    shoulder_state: null
+    ribcage_direction: null
+    torso_lean: null
+    torso_twist: null
+
+  hand_behavior:
+    primary_action: null
+    secondary_action: null
+    palm_orientation: null
+    self_touch_target: null
+    prop_interaction: null
+    elbow_direction: null
+
+  full_body:
+    line_of_action: null
+    pelvis_direction: null
+    center_of_gravity: null
+    support_points: []
+    stance_width: null
+    foot_direction: null
+    motion_phase: null
+    movement_amplitude: null
+    personal_space: null
+
+  appearance_behavior:
+    hairstyle_motion: null
+    clothing_attitude: null
+    clothing_motion: null
+    accessory_behavior: null
+    prop_behavior: null
+
+  color_hierarchy:
+    skin_base: null
+    hair_dominant: null
+    eye_accent: null
+    outfit_primary: null
+    outfit_support: null
+    outfit_accent: null
+    group_palette_relation: null
+
+  camera_handoff:
+    framing: null
+    camera_height_relation: null
+    body_to_camera_angle: null
+    gaze_to_camera: null
+    note: null
+
+  deep_story_mode:
+    enabled: false
+    want: null
+    contradiction: null
+    relationship_pressure: null
+    wound: null
+    secret: null
+    arc_state: null
+
+  differentiation_handoff:
+    enabled: false
+    spec_ref: null
+    same_uniform_test: null
+    same_emotion_test: null
+    same_action_test: null
